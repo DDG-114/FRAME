@@ -1,0 +1,76 @@
+{
+  "version": 1,
+  "timezone": "AEST (UTC+10)",
+  "horizons_hours": [
+    2,
+    24,
+    168
+  ],
+  "maximum_horizon_hours": 168,
+  "interval_semantics": {
+    "forecast_origin": "start <= forecast_origin < end",
+    "target_window": "forecast_origin < target_time <= forecast_origin + horizon_hours",
+    "isolation": "For each adjacent pair, earlier origin_end + 168 hours <= later origin_start. Because origin_end is excluded, every earlier target_window ends strictly before the later split begins."
+  },
+  "raw_data_buffer": {
+    "start": "2021-12-01T00:00:00",
+    "end": "2026-09-01T00:00:00",
+    "interval": "[start, end)",
+    "required_for": "Input history before the first forecast origin and complete 168-hour targets after the last forecast origin."
+  },
+  "splits": [
+    {
+      "name": "train",
+      "origin_start": "2022-01-01T00:00:00",
+      "origin_end": "2023-12-25T00:00:00",
+      "role": "model fitting"
+    },
+    {
+      "name": "validation",
+      "origin_start": "2024-01-01T00:00:00",
+      "origin_end": "2024-06-24T00:00:00",
+      "role": "model and hyperparameter selection"
+    },
+    {
+      "name": "calibration",
+      "origin_start": "2024-07-01T00:00:00",
+      "origin_end": "2024-12-25T00:00:00",
+      "role": "post-hoc calibration only"
+    },
+    {
+      "name": "test",
+      "origin_start": "2025-01-01T00:00:00",
+      "origin_end": "2026-01-01T00:00:00",
+      "role": "full independent final evaluation"
+    },
+    {
+      "name": "confirmation",
+      "origin_start": "2026-01-08T00:00:00",
+      "origin_end": "2026-08-25T00:00:00",
+      "role": "full post-test confirmation"
+    }
+  ],
+  "sampling": {
+    "quick_run": {
+      "eligible_splits": [
+        "train",
+        "validation",
+        "calibration"
+      ],
+      "origins_per_month_horizon": {
+        "train": 8,
+        "validation": 4,
+        "calibration": 4
+      }
+    },
+    "test": {
+      "mode": "full",
+      "diagnostic_test_origins_per_month_horizon": 4,
+      "diagnostic_test_selection_allowed": false
+    },
+    "confirmation": {
+      "mode": "full",
+      "selection_allowed": false
+    }
+  }
+}
