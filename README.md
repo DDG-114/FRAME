@@ -1,5 +1,11 @@
 # FRAME
 
+## Multisource research branch
+
+The current multisource model and PV context-control experiments are in
+[`research/multisource`](research/multisource/README.md). The root-level implementation
+below remains the earlier multiyear-suite release.
+
 **Forecast-Origin Representation-Controlled Adaptation for Multi-Task Energy Forecasting**
 
 FRAME forecasts load, wind generation, photovoltaic generation and net load with a shared numerical backbone. Frozen Qwen representations, numerical context and availability information control low-rank residual adapters. A conditional decoder produces point forecasts and ordered marginal quantiles, followed by optional center correction and conformal calibration.

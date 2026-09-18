@@ -20,3 +20,4 @@ __pycache__/
 *.parquet
 *.pem
 *.key
+/research/multisource/year_split_20260918/
