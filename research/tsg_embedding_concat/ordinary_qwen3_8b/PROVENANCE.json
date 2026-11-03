@@ -1,0 +1,68 @@
+{
+  "source_registration": {
+    "source": "experiments/proposed_paper_ablation_s2027_20261030/REGISTRATION.json",
+    "sha256": "14b4cf6441b7d5460080a639624e63b7eafa996fc9ac79c4bd72ffe49cc4e7e0"
+  },
+  "files": {
+    "manuscript/paper.tex": {
+      "source": "TSG_2027YK/paper.tex",
+      "sha256": "a734077d2d7b46464a14fa5d38b8cedb33c427e945fe81db4d51c24abc89d47b"
+    },
+    "manuscript/references.bib": {
+      "source": "TSG_2027YK/references.bib",
+      "sha256": "fd4d5a72c90575c7a5e35cc6b82c1bfffe93c13a4b506d5ef98edb068b0380e9"
+    },
+    "manuscript/IEEEtran.cls": {
+      "source": "TSG_2027YK/IEEEtran.cls",
+      "sha256": "da751920a317ed318b7b5cd7fa585a6cc7d28502d457856382e9be24b10a3bd7"
+    },
+    "manuscript/IEEEtran.bst": {
+      "source": "TSG_2027YK/IEEEtran.bst",
+      "sha256": "314f0ece704568faf827011bac498650691b2b5ee06320720830e782416d5a5f"
+    },
+    "manuscript/Figures/energyca_llm_framework.pdf": {
+      "source": "TSG_2027YK/Figures/energyca_llm_framework.pdf",
+      "sha256": "8bda0bfa67dfcaa89e58699a47b0b557c5ec8dedb407dadcc5e86590af184850"
+    },
+    "manuscript/Figures/fig_rolling_forecast_comparison.pdf": {
+      "source": "TSG_2027YK/Figures/fig_rolling_forecast_comparison.pdf",
+      "sha256": "876a6c08936f1d5c64efb07221680157c8b5befebbe28a8d8185d0a60dd69851"
+    },
+    "predictor/model.py": {
+      "source": "experiments/proposed_paper_ablation_s2027_20261030/model.py",
+      "sha256": "927a16101fd27bce18b063453607ee47e4779fe713bf1cb9584d53208bb04aab"
+    },
+    "predictor/data.py": {
+      "source": "experiments/proposed_paper_ablation_s2027_20261030/data.py",
+      "sha256": "f05a8da92b57202907b4aae25192bad56034bf89d729c09e3fd51325f6f423b6"
+    },
+    "predictor/train.py": {
+      "source": "experiments/proposed_paper_ablation_s2027_20261030/train.py",
+      "sha256": "97053d94a0fdae74a48cf4ec779a625a702f80195f876e0bc9ffad074288811e"
+    },
+    "predictor/build_cache.py": {
+      "source": "experiments/proposed_paper_ablation_s2027_20261030/build_cache.py",
+      "sha256": "ad38c443f55060af16958f731356eee7260f92fefdc21560325198f1fb1b25f9"
+    },
+    "predictor/audit.py": {
+      "source": "experiments/proposed_paper_ablation_s2027_20261030/audit.py",
+      "sha256": "0f3a99648e6a17e0f7e68d74562cd16381d9130fb5997f6fde26a8ba210991cb"
+    },
+    "predictor/test_paper_model.py": {
+      "source": "experiments/proposed_paper_ablation_s2027_20261030/test_paper_model.py",
+      "sha256": "688696d3353f92e07d1df49f4aaaad1dbf3933dc2692fc627813ee4e9f2d30d8"
+    },
+    "predictor/configs/dual.json": {
+      "source": "experiments/proposed_paper_ablation_s2027_20261030/configs/dual.json",
+      "sha256": "dedb6815450ed8e632174b617592a443f780930c812aa24d67ab1ba7780a34b9"
+    },
+    "evidence/TABLE2_CHECKED_CELLS.json": {
+      "source": "experiments/proposed_paper_ablation_s2027_20261030/TABLE2_CHECKED_CELLS.json",
+      "sha256": "61a1fae991c42cfb13f1f7621587231f809dffce1196e9a2532010d8bc90dc83"
+    },
+    "evidence/paper_source_snapshot.tex": {
+      "source": "experiments/proposed_paper_ablation_s2027_20261030/paper_source_snapshot.tex",
+      "sha256": "ad9449a435493af209f50d05c5d67aed3d774e136c1d9348041c42ec813d7506"
+    }
+  }
+}

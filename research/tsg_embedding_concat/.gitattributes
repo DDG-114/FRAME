@@ -3,3 +3,8 @@ predictor/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-e
 fact_encoding/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 evidence/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 notes/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+ordinary_qwen3_8b/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+ordinary_qwen3_8b/manuscript/Figures/*.pdf binary
+ordinary_qwen3_8b/manuscript/IEEEtran.* -whitespace
+ordinary_qwen3_8b/manuscript/paper.tex -whitespace
+ordinary_qwen3_8b/evidence/paper_source_snapshot.tex -whitespace
