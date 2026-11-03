@@ -1,0 +1,102 @@
+{
+  "study": "tsg_embedding_vs_mlp_concat_s2027_20261103",
+  "seed": 2027,
+  "hypothesis": "Frozen typed Qwen3-Embedding beats field-bound structured MLP with identical factuality, concat fusion, numerical interface, cohort and selection rule.",
+  "primary_comparisons": [
+    "typed Embedding concat versus typed structured MLP concat"
+  ],
+  "architecture": {
+    "model_py_sha256": "0933337a8a3eb31e4af37d52b5c28f90108714969bbad86bcc91540044823db1",
+    "data_py_sha256": "f05a8da92b57202907b4aae25192bad56034bf89d729c09e3fd51325f6f423b6",
+    "dual_parameters": 1937797,
+    "schema_parameters": 1954181,
+    "common": "Original four-layer width128/heads4/rank8 dual-gated PaperForecaster. Same numerical inputs/22futureinterface/masks/loss/dropout/optimizer/sampling. Schema only retains existing schema_output.weight128x128 extra16384parameters with forked initializerRNG.",
+    "product_path_active": false
+  },
+  "arms": {
+    "typed_schema_dynamic": {
+      "mode": "mlp_schema_concat",
+      "encoder": "schema",
+      "factuality": "dynamic",
+      "corpus": "TEXT_TYPED.json",
+      "parent_manifest_sha256": "bda15696256d741250f2a62c7ec0d109d2abd6ea03ec4f28751de39e1eac4981",
+      "vectors_sha256": "34c7d633bca9aa9bc5470a477acbaae04f4f152a4fc7ea513cbc90af778e71ac"
+    }
+  },
+  "corpus": {
+    "source": "Original frozen TSG complete TEXT_CORPUS.json, not the later difference-text corpus",
+    "windows": 18612,
+    "no_new_information": true,
+    "instruction": "Represent this energy forecasting context, preserving asset identity, observation availability, current operating state, and the direction and magnitude of changes.",
+    "same_instruction": true,
+    "tokenizer": "Pinned Qwen3-Embedding-8B tokenizer; same token IDs and official terminal token for both models; no chat template",
+    "pooling": "last valid token of final layer, FP32 thenL2",
+    "max_tokens": 512,
+    "truncation": false,
+    "batch": 16,
+    "dtype": "BF16",
+    "attention": "eager",
+    "LoRA": false,
+    "encoder_frozen": true
+  },
+  "facts": {
+    "target": "Latest, originpast24hmean/peak, signed1h/3h/24hchanges andlastday-vs-previousdaymeanchange onoriginalTRAINz.",
+    "load": "Spatialmean oforiginal25 separatelyTRAINstandardizedtemperaturechannels; recent24hmeanand1hchange. Physicaltemperatureunitunverified, staysz.",
+    "wind": "Separatelynamedwind-speed24hmean/1hchange(m/s), recentrelativewinddirection(degrees, noangleaveraging), externaltemperature24hmean(C), recentthreebladepitchmean(degrees). PhysicalvaluesreconstructedfromoriginalinputzusingfrozenoriginalTRAINoffset/scale. No inventedcurtailment/outagecauses.",
+    "pv": "Targethistory dailymean/peak/daymeanchange, no inventedweather/irradiance.",
+    "net_load": "Existingforecastvalidlead22..47.5hsolarmean/peak inoriginalTRAINz,radiationphysicalunitunverified;100mwindforecastmean/lastminusfirst in m/s usingfrozenTRAINscale. Effectivepublication mustprecedeorigin."
+  },
+  "usual": "Per-field lowerTRAINmedian conditioned onoriginalasset/calendar,>=16uniqueorigins andsamepredeclaredbackoff; keep recipientfieldmissingness andallcurrentmetadata/counts/age/availability. NoVAL fitting.",
+  "schema": "Field-bound scalars,masks,directiononehots, task/asset/cadence/calendar/currentmetadata; per-task TRAINmean/std ontypedfacts, constantfeature scale1; anchor1plusL2 thenzeropad4096. Recover everyquantizedscalar andinteger time/countmetadata exactly. Samefacts asLLM, strongerthanoldorderlesshashedtokens.",
+  "training": {
+    "batch": {
+      "load": 16,
+      "wind": 2,
+      "pv": 16,
+      "net_load": 16
+    },
+    "microbatch": 4,
+    "optimizer": "AdamW",
+    "lr": 0.0003,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "weight_decay": 0.0001,
+    "clip": 1.0,
+    "schedule": "constant",
+    "BF16": true,
+    "EMA": false,
+    "language_LoRA": false,
+    "loss": "equal-task TRAIN-mean-absolute-scale masked Huber1 plus1e-4 pre-strength branch energy"
+  },
+  "selection": {
+    "metric": "complete four-task VAL asset-macro NMAE mean",
+    "earliest_tie": true,
+    "every_updates": 128,
+    "eligible": "128..2560",
+    "shared_checkpoint": true,
+    "TEST": false
+  },
+  "budget": {
+    "new_formal": 2560,
+    "new_qualification": 3,
+    "formal_per_arm": 2560,
+    "qualification_per_arm": 3,
+    "new_encoding": 0,
+    "new_probe_forward": 0,
+    "previous_track_formal": 33280,
+    "previous_track_qualification": 39,
+    "registered_track_formal": 35840,
+    "registered_track_qualification": 42,
+    "formal_raw": 168,
+    "qualification_raw": 16,
+    "candidate_complete_checkpoints": 23,
+    "selected_copies": 2,
+    "cold_raw": 16
+  },
+  "success": {
+    "primary": "Embedding at least 0.5 percent lower mean VAL NMAE and at least 3 of 4 tasks lower NMAE. Report paired 7-day block interval and wins across all 20 shared checkpoints, late eight and terminal comparison. A reversal or exploratory interval crossing zero limits stability claims. Independent seed or held-out confirmation requires authorization."
+  },
+  "change": "Compose the existing mlp_schema input projection and nonlinear output with concat_only product mask. Same backbone, training and data. Retain MLP extra 16384 allocated parameters."
+}

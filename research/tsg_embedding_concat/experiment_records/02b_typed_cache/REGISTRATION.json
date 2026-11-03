@@ -1,0 +1,32 @@
+{
+  "study": "tsg_typed_operating_facts_cache_s2027_20261103",
+  "files": {
+    "EXPECTED_MODELS.json": "1ccac7024db39d0866c32510750358a7ccd8e2bae5f174103cd0392b24c527a1",
+    "FACT_ROWS.json": "1de5c974195082e277120185c983b53af623b1e2ecd9d24845b82641c74540e7",
+    "INPUT_CONTRACT.json": "24eef4ca875cf873f218caefa8222d3c2566e248dd8613ae091a29ea4b9ec038",
+    "PLAN.json": "91fd1316d36dce893847010323d4ab02b86004ac33f9159c585e7b6d3d070e37",
+    "PROJECT_BRIEF.md": "db4d57cbeed14d98586de293f6d49a8e0b633e276a4b3ddf2e993920a0d81cd5",
+    "SCHEMA_STATS.json": "41de6e6d12a42565537fbbd79bbb5f2bb4227b769855f8cb85e3640ccdfd740b",
+    "TEXT_CORPUS.json": "193332cd3fdbf4ca23e6b8bed02f2e45099b438eff36dc408e5866675125b663",
+    "TEXT_ROWS.npz": "ad3f1212d5b619c3c5eff3edd250bdb82a752390fe692f43750f844029b7b94d",
+    "TEXT_TYPED.json": "66935b74b91c56885a415a87a31e0f6edaccf9bc063ccb5233456ea7efb63929",
+    "TEXT_USUAL.json": "cfa1e9a0a18c374fb54c26b522ea33d8c53a055c8af5aad5f3617ed4fee2700c",
+    "TRAIN_USUAL_FIT.json": "77bd8b56a97467f6c70ff8fe5ed352aee273a8f33a9dfbb3b2588588e8efdead",
+    "USER_AUTHORIZATION.json": "137b3644ed921864e992931cea73ff7f2a0ed4eb401ba05c02bfe9bfb07e4a6a",
+    "USUAL_ROWS.json": "1bf7153790771bcd6d2289f190088a25371de1d61894d1452ec37c8ff29ec316",
+    "audit_typed.py": "cbfae46dd072add79cc6caf70925759777b6c7642f4f870cd392264ac0135678",
+    "cache_tools.py": "0e7e31d406cfcbaf00685453f4073d09220d4fb0ff3607a89a907e8d6903430a",
+    "context.py": "706b98c94ce3ff19a9d3467ddcb8748c3c155fe164465740655b2d4ae80886f2",
+    "data.py": "f05a8da92b57202907b4aae25192bad56034bf89d729c09e3fd51325f6f423b6",
+    "encode_typed.py": "ecbbe9023dd6902a99b3315729412c7a8ad95f53e0c57ab7044cde87c5741a96",
+    "gpu_entry.py": "b9cd3f1090734f8954276c93b92242cd7a2bad01b8cd414f9849b4a01d58e968",
+    "operations.py": "35bc8cff9958310a48f11d5fbacd09dc21eae83c9ad37e16572e447d1f7c9dc3",
+    "pipeline.py": "fd9b20fd520ff29feaec4e453602a47a86c8cf1d819a4cc0b6f96649a8e2295c",
+    "prepare.py": "f8ebba16ba8b476046438ab13e727f66bc02d8555233306d67ba958923ebe6d7",
+    "structured.py": "7337ea5f20836ece35b69a133fe0c164acc876088bfc75167d56930d498588fc",
+    "test_typed.py": "cef67183c9f2040c525ab8e5b5474b1f06268dcb0ade702636570bd2c9ec343a",
+    "typed_facts.py": "8f8407ae72625305e4f08f94c29a8beef24c7331e15c675fa5e4cffed241e82b",
+    "CPU_ACCEPTANCE.json": "a190fda98115ae7448d74bc219354138ba9c63e72908d4ee849526f4d169bed3",
+    "NATIVE_PREFLIGHT.json": "6f6a6699edf7291c359255322a5b694806d096c3403bbd2a3eb7bd177c8abb52"
+  }
+}

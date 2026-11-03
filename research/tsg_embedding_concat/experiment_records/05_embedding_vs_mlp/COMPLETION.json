@@ -1,0 +1,320 @@
+{
+  "status": "complete_independently_verified",
+  "collection_files_sha_rechecked": 292,
+  "registration_sha256": "49ca70565850333c96d6733430a081ad11fec4060ad619cc5a03ae0d1418fb04",
+  "results_sha256": "c059935a4f9af57dc86e6f17eb2903ae49ac27f28ba100b9953a78355959994f",
+  "new_formal": 2560,
+  "new_qualification": 3,
+  "cumulative_formal": 35840,
+  "cumulative_qualification": 42,
+  "candidate_checkpoints": 23,
+  "independent_replay": {
+    "status": "passed",
+    "recomputed_metrics": 32,
+    "max_abs_delta": 0.0,
+    "cold_raw_exact": 16,
+    "product_weights_inactive_all_updates": true,
+    "counts": {
+      "typed_schema_dynamic": {
+        "selected_step": 2560,
+        "formal_raw": 168,
+        "qual_raw": 16
+      }
+    },
+    "locks_available": true,
+    "registered_files_unchanged": true,
+    "new_GPU_updates": 0
+  },
+  "selected": {
+    "typed_schema_dynamic": {
+      "step": 2560,
+      "score": 0.3581435935787023,
+      "mean_mase": 0.9335473565251795,
+      "train": {
+        "load": {
+          "nmae": 0.0954534805056174,
+          "rmse": 17.751230694220496,
+          "smape": 9.618013272071954,
+          "mase": 0.8316346149460435
+        },
+        "wind": {
+          "nmae": 0.6190775957603283,
+          "rmse": 372.76400675298726,
+          "smape": 80.60531346082561,
+          "mase": 0.6553853975298365
+        },
+        "pv": {
+          "nmae": 0.3952044962058083,
+          "rmse": 0.09834281276910525,
+          "smape": 121.33024829547871,
+          "mase": 0.8535140773481986
+        },
+        "net_load": {
+          "nmae": 0.07681462413633947,
+          "rmse": 134.3950552470584,
+          "smape": 7.818016461642734,
+          "mase": 1.0409738789871943
+        }
+      },
+      "val": {
+        "load": {
+          "nmae": 0.10211861532356827,
+          "rmse": 22.07615284800006,
+          "smape": 9.98698607122539,
+          "mase": 1.002399071778072
+        },
+        "wind": {
+          "nmae": 0.7343854749525375,
+          "rmse": 366.7455185627041,
+          "smape": 86.46370538911492,
+          "mase": 0.6597948715398751
+        },
+        "pv": {
+          "nmae": 0.5053641064462439,
+          "rmse": 0.11435394265269272,
+          "smape": 131.52695235584378,
+          "mase": 0.9322890267232342
+        },
+        "net_load": {
+          "nmae": 0.09070617759245955,
+          "rmse": 142.27690862606616,
+          "smape": 9.299733253871718,
+          "mase": 1.1397064560595367
+        }
+      },
+      "eligible": true
+    },
+    "embedding_concat": {
+      "step": 2176,
+      "score": 0.3470036238013211,
+      "mean_mase": 0.8953847218987906,
+      "train": {
+        "load": {
+          "nmae": 0.09311392879456168,
+          "rmse": 17.19716954649644,
+          "smape": 9.48258710294984,
+          "mase": 0.8112513646332832
+        },
+        "wind": {
+          "nmae": 0.6228981253157485,
+          "rmse": 375.06706766652485,
+          "smape": 81.72401190889028,
+          "mase": 0.659751916374245
+        },
+        "pv": {
+          "nmae": 0.4148420633829871,
+          "rmse": 0.10259145271110766,
+          "smape": 121.32458295905023,
+          "mase": 0.8957278772129409
+        },
+        "net_load": {
+          "nmae": 0.07638031748003794,
+          "rmse": 134.48983625984727,
+          "smape": 7.771411604571271,
+          "mase": 1.0415686268227047
+        }
+      },
+      "val": {
+        "load": {
+          "nmae": 0.09382930299415175,
+          "rmse": 20.72972603210918,
+          "smape": 9.10352217527654,
+          "mase": 0.9210309592321122
+        },
+        "wind": {
+          "nmae": 0.7057550424363822,
+          "rmse": 364.47708957785557,
+          "smape": 85.2452643961809,
+          "mase": 0.6360025403732532
+        },
+        "pv": {
+          "nmae": 0.5024853639035111,
+          "rmse": 0.1106720435191649,
+          "smape": 130.62768009956068,
+          "mase": 0.9247045464690092
+        },
+        "net_load": {
+          "nmae": 0.08594478587123942,
+          "rmse": 141.2508609535751,
+          "smape": 8.837797578233397,
+          "mase": 1.0998008415207878
+        }
+      },
+      "eligible": true
+    }
+  },
+  "metric_gains_percent": {
+    "train": {
+      "load": {
+        "nmae": 2.4509862800843996,
+        "rmse": 3.121254842935761,
+        "smape": 1.4080472265031507,
+        "mase": 2.4509862800844107
+      },
+      "wind": {
+        "nmae": -0.6171325826656693,
+        "rmse": -0.617833501039633,
+        "smape": -1.3878718412382973,
+        "mase": -0.6662520802059424
+      },
+      "pv": {
+        "nmae": -4.96896350261975,
+        "rmse": -4.320234313388616,
+        "smape": 0.004669352043751296,
+        "mase": -4.945882087369569
+      },
+      "net_load": {
+        "nmae": 0.5653957969392165,
+        "rmse": -0.07052418157396101,
+        "smape": 0.5961212450769193,
+        "mase": -0.05713379053171597
+      }
+    },
+    "val": {
+      "load": {
+        "nmae": 8.117337180054186,
+        "rmse": 6.099010208714228,
+        "smape": 8.846151277754311,
+        "mase": 8.117337180054218
+      },
+      "wind": {
+        "nmae": 3.8985564792121785,
+        "rmse": 0.6185294352712534,
+        "smape": 1.4091935887441287,
+        "mase": 3.6060194149575175
+      },
+      "pv": {
+        "nmae": 0.5696373181261927,
+        "rmse": 3.219739563077595,
+        "smape": 0.6837170938547521,
+        "mase": 0.8135331465696338
+      },
+      "net_load": {
+        "nmae": 5.2492474576681385,
+        "rmse": 0.7211624728139965,
+        "smape": 4.967192746587701,
+        "mase": 3.5013940937669186
+      }
+    }
+  },
+  "nmae_strata_wins_total": {
+    "load/asset": [
+      1,
+      1
+    ],
+    "load/chronological_quarter": [
+      4,
+      4
+    ],
+    "wind/asset": [
+      8,
+      8
+    ],
+    "wind/chronological_quarter": [
+      4,
+      4
+    ],
+    "pv/asset": [
+      5,
+      8
+    ],
+    "pv/chronological_quarter": [
+      3,
+      4
+    ],
+    "net_load/asset": [
+      2,
+      8
+    ],
+    "net_load/chronological_quarter": [
+      3,
+      4
+    ],
+    "load/lead": [
+      22,
+      24
+    ],
+    "wind/lead": [
+      108,
+      144
+    ],
+    "pv/lead": [
+      10,
+      24
+    ],
+    "net_load/lead": [
+      32,
+      52
+    ]
+  },
+  "decision": {
+    "status": "complete_exploratory_comparison",
+    "source_study": "tsg_embedding_vs_mlp_concat_s2027_20261103",
+    "relative_mean_nmae_gain_percent": 3.110475791585865,
+    "paired_origin_block_CI95": [
+      -0.23668641214896755,
+      6.47387151741381
+    ],
+    "all_selected_mean_VAL_NMAE": {
+      "embedding_concat": 0.3470036238013211,
+      "typed_schema_dynamic": 0.3581435935787023
+    },
+    "favorable_tasks": 4,
+    "practical_targets_met": true,
+    "same_step_win_steps": [
+      128,
+      256,
+      384,
+      512,
+      1024,
+      1152,
+      1408,
+      1536,
+      1920,
+      2048,
+      2176,
+      2304,
+      2432
+    ],
+    "last8_wins": 5,
+    "final_step_gain_percent": -5.455221721567005,
+    "bootstrap_design": {
+      "load": {
+        "origins": 365,
+        "median_spacing_seconds": 86400.0,
+        "circular_block_origins": 7,
+        "block_days": 7,
+        "replicates": 5000,
+        "same_origin_assets_resampled_together": true
+      },
+      "wind": {
+        "origins": 23,
+        "median_spacing_seconds": 86400.0,
+        "circular_block_origins": 7,
+        "block_days": 7,
+        "replicates": 5000,
+        "same_origin_assets_resampled_together": true
+      },
+      "pv": {
+        "origins": 52,
+        "median_spacing_seconds": 86400.0,
+        "circular_block_origins": 7,
+        "block_days": 7,
+        "replicates": 5000,
+        "same_origin_assets_resampled_together": true
+      },
+      "net_load": {
+        "origins": 364,
+        "median_spacing_seconds": 86400.0,
+        "circular_block_origins": 7,
+        "block_days": 7,
+        "replicates": 5000,
+        "same_origin_assets_resampled_together": true
+      }
+    },
+    "seed": 2027,
+    "all16_reported": true,
+    "interpretation": "Matched factuality and concat fusion. MLP retains 16384 additional allocated parameters. Exploratory validation after reused selection.",
+    "source_results_sha256": "c059935a4f9af57dc86e6f17eb2903ae49ac27f28ba100b9953a78355959994f"
+  }
+}

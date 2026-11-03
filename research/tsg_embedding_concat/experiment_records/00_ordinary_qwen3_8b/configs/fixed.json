@@ -1,0 +1,42 @@
+{
+  "seed": 2027,
+  "updates": 2560,
+  "evaluate_every": 128,
+  "mode": "fixed",
+  "model": {
+    "width": 128,
+    "channels": 30,
+    "patch": 16,
+    "stride": 8,
+    "layers": 4,
+    "heads": 4,
+    "rank": 8,
+    "semantic_width": 4096,
+    "future_fields": 6,
+    "dropout": 0.1,
+    "mode": "fixed"
+  },
+  "batch": {
+    "load": 16,
+    "wind": 2,
+    "pv": 16,
+    "net_load": 16
+  },
+  "microbatch": 4,
+  "optimizer": {
+    "name": "AdamW",
+    "lr": 0.0003,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "weight_decay": 0.0001,
+    "clip": 1.0
+  },
+  "selection": "complete_four_task_VAL_asset_macro_NMAE_mean_earliest_tie",
+  "early_stopping": false,
+  "EMA": false,
+  "language_LoRA": false,
+  "schedule": "constant; manuscript does not prescribe WSD",
+  "input_contract_sha256": "24eef4ca875cf873f218caefa8222d3c2566e248dd8613ae091a29ea4b9ec038"
+}

@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "optimizer_updates": 0,
+  "qualification_updates": 0,
+  "formal_updates": 0,
+  "new_forward_windows": 37224,
+  "replay_windows": 32,
+  "reused_dynamic_forward_windows": 0,
+  "postload_GPU_seconds": 674.5034165382385,
+  "costs": {
+    "embedding_usual": {
+      "forward_windows": 18612,
+      "replay_windows": 16,
+      "GPU_seconds": 337.7960698604584
+    },
+    "embedding_shifted": {
+      "forward_windows": 18612,
+      "replay_windows": 16,
+      "GPU_seconds": 336.69757318496704
+    }
+  }
+}

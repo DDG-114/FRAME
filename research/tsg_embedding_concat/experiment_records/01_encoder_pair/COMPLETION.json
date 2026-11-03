@@ -1,0 +1,166 @@
+{
+  "status": "complete_independently_verified_not_promoted",
+  "study": "tsg_embedding_encoder_pair_v2_s2027_20261102",
+  "registration_sha256": "b5f4a59eb9d61c6be5c5c875fcd65054c957fbf62b63647f91d9128f55fee890",
+  "actual_formal": 10240,
+  "actual_qualification": 12,
+  "selected_steps": {
+    "ordinary_dynamic": 2176,
+    "ordinary_static": 2560,
+    "embedding_dynamic": 1920,
+    "embedding_static": 2176
+  },
+  "mean_VAL_NMAE": {
+    "ordinary_dynamic": 0.3537105618420543,
+    "ordinary_static": 0.3566056479538907,
+    "embedding_dynamic": 0.361745369608592,
+    "embedding_static": 0.3540335032860253
+  },
+  "effects": {
+    "embedding_vs_ordinary_dynamic_percent_gain": {
+      "point": -2.2715769991978885,
+      "paired_origin_block_CI95": [
+        -5.362057706714463,
+        1.9939278805329268
+      ],
+      "positive_favors_embedding_or_dynamic": true
+    },
+    "embedding_dynamic_vs_static_percent_gain": {
+      "point": -2.178287153895786,
+      "paired_origin_block_CI95": [
+        -7.220556671545558,
+        5.256410721152808
+      ],
+      "positive_favors_embedding_or_dynamic": true
+    },
+    "ordinary_dynamic_vs_static_percent_gain": {
+      "point": 0.811845277394696,
+      "paired_origin_block_CI95": [
+        -0.718250745815811,
+        2.4805173271494243
+      ],
+      "positive_favors_embedding_or_dynamic": true
+    },
+    "dynamic_advantage_interaction_log_percent": {
+      "point": -2.9700601612231647,
+      "paired_origin_block_CI95": [
+        -7.862034603745165,
+        3.756706537220018
+      ],
+      "positive_favors_embedding_or_dynamic": true
+    }
+  },
+  "practical_targets_met": false,
+  "source_results_sha256": "61676aeed8d48f47321a6ecbeddadea0f4ffd57d268f6b153ce8c046e6f37216",
+  "collection_proof": {
+    "status": "passed",
+    "collection_files_rechecked": 976,
+    "formal_raw": 672,
+    "qualification_raw": 64,
+    "candidate_checkpoints": 92,
+    "native_audits": {
+      "101/runs/ordinary_dynamic": {
+        "status": "all_candidates_independently_verified",
+        "formal_updates": 2560,
+        "qualification_updates": 0,
+        "raw_count": 168,
+        "sampler_exact": true,
+        "optimizer_ages_exact": true,
+        "cohort_exact": true,
+        "cold_exact": true,
+        "actual_semantic_input_bytes_exact": true
+      },
+      "101/runs/ordinary_static": {
+        "status": "all_candidates_independently_verified",
+        "formal_updates": 2560,
+        "qualification_updates": 0,
+        "raw_count": 168,
+        "sampler_exact": true,
+        "optimizer_ages_exact": true,
+        "cohort_exact": true,
+        "cold_exact": true,
+        "actual_semantic_input_bytes_exact": true
+      },
+      "101/qualification/ordinary_dynamic": {
+        "status": "all_candidates_independently_verified",
+        "formal_updates": 0,
+        "qualification_updates": 3,
+        "raw_count": 16,
+        "sampler_exact": true,
+        "optimizer_ages_exact": true,
+        "cohort_exact": true,
+        "cold_exact": true,
+        "actual_semantic_input_bytes_exact": true
+      },
+      "101/qualification/ordinary_static": {
+        "status": "all_candidates_independently_verified",
+        "formal_updates": 0,
+        "qualification_updates": 3,
+        "raw_count": 16,
+        "sampler_exact": true,
+        "optimizer_ages_exact": true,
+        "cohort_exact": true,
+        "cold_exact": true,
+        "actual_semantic_input_bytes_exact": true
+      },
+      "102/runs/embedding_dynamic": {
+        "status": "all_candidates_independently_verified",
+        "formal_updates": 2560,
+        "qualification_updates": 0,
+        "raw_count": 168,
+        "sampler_exact": true,
+        "optimizer_ages_exact": true,
+        "cohort_exact": true,
+        "cold_exact": true,
+        "actual_semantic_input_bytes_exact": true
+      },
+      "102/runs/embedding_static": {
+        "status": "all_candidates_independently_verified",
+        "formal_updates": 2560,
+        "qualification_updates": 0,
+        "raw_count": 168,
+        "sampler_exact": true,
+        "optimizer_ages_exact": true,
+        "cohort_exact": true,
+        "cold_exact": true,
+        "actual_semantic_input_bytes_exact": true
+      },
+      "102/qualification/embedding_dynamic": {
+        "status": "all_candidates_independently_verified",
+        "formal_updates": 0,
+        "qualification_updates": 3,
+        "raw_count": 16,
+        "sampler_exact": true,
+        "optimizer_ages_exact": true,
+        "cohort_exact": true,
+        "cold_exact": true,
+        "actual_semantic_input_bytes_exact": true
+      },
+      "102/qualification/embedding_static": {
+        "status": "all_candidates_independently_verified",
+        "formal_updates": 0,
+        "qualification_updates": 3,
+        "raw_count": 16,
+        "sampler_exact": true,
+        "optimizer_ages_exact": true,
+        "cohort_exact": true,
+        "cold_exact": true,
+        "actual_semantic_input_bytes_exact": true
+      }
+    }
+  },
+  "details_file": "experiments\\tsg_embedding_recursive_20261102\\ROUND_tsg_embedding_encoder_pair_v2_s2027_20261102\\DETAILS.json",
+  "all16_CSV": "experiments\\tsg_embedding_recursive_20261102\\ROUND_tsg_embedding_encoder_pair_v2_s2027_20261102\\SELECTED_VAL.csv",
+  "same_step_CSV": "experiments\\tsg_embedding_recursive_20261102\\ROUND_tsg_embedding_encoder_pair_v2_s2027_20261102\\SAME_STEP_ALL20.csv",
+  "favorable_tasks_embedding_vs_ordinary": 1,
+  "preserved_partial_result": {
+    "task": "net_load",
+    "embedding_dynamic_vs_embedding_static_NMAE_gain_percent": 7.139355545952664,
+    "assets_favorable": 8,
+    "total_assets": 8,
+    "chronological_quarters_favorable": 4,
+    "total_quarters": 4,
+    "limitation": "Includes metadata/calendar differences and separate training; does not yet establish event-fact dependence or a general encoder advantage."
+  },
+  "non_improving_rounds_this_embedding_track": 1
+}

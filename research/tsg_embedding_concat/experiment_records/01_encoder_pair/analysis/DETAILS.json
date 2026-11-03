@@ -1,0 +1,356 @@
+{
+  "status": "complete_selected_and_same_step_diagnostics",
+  "selected_metric_degradation_percent": {
+    "embedding_dynamic_vs_ordinary_dynamic": {
+      "load": {
+        "nmae": 16.609629703214203,
+        "rmse": 19.010665834113972,
+        "smape": 16.15690746838272,
+        "mase": 16.60962970321418
+      },
+      "wind": {
+        "nmae": 1.5115367757597475,
+        "rmse": 8.60845508659962,
+        "smape": 7.118210181473117,
+        "mase": 1.6649136951902177
+      },
+      "pv": {
+        "nmae": 1.2160716576757657,
+        "rmse": -1.151745263613635,
+        "smape": -0.10053012684850815,
+        "mase": 0.9759731063736288
+      },
+      "net_load": {
+        "nmae": -2.1703625288391093,
+        "rmse": 0.3409981644313387,
+        "smape": -2.0168208390296316,
+        "mase": -1.6927424311192096
+      }
+    },
+    "embedding_dynamic_vs_embedding_static": {
+      "load": {
+        "nmae": 29.660013626895143,
+        "rmse": 31.131875200998827,
+        "smape": 28.782703658866016,
+        "mase": 29.660013626895143
+      },
+      "wind": {
+        "nmae": 1.390378235911549,
+        "rmse": 10.211028674292244,
+        "smape": 9.567050830480039,
+        "mase": 1.8626834526623615
+      },
+      "pv": {
+        "nmae": -0.007901723904180091,
+        "rmse": -1.3479584326134053,
+        "smape": -0.6450937675389068,
+        "mase": -0.11911727737909938
+      },
+      "net_load": {
+        "nmae": -7.139355545952664,
+        "rmse": -5.507549086571872,
+        "smape": -7.102951848409078,
+        "mase": -7.6607138125670105
+      }
+    },
+    "ordinary_dynamic_vs_ordinary_static": {
+      "load": {
+        "nmae": 9.056846768240145,
+        "rmse": 12.074750318790972,
+        "smape": 5.61257582140855,
+        "mase": 9.056846768240145
+      },
+      "wind": {
+        "nmae": -1.7403047358994561,
+        "rmse": -4.163107728599669,
+        "smape": -2.520467728106479,
+        "mase": -1.8878585041434581
+      },
+      "pv": {
+        "nmae": -1.6230055172962832,
+        "rmse": -0.41134788912423614,
+        "smape": -1.2485257854837228,
+        "mase": -1.4850533221879125
+      },
+      "net_load": {
+        "nmae": 1.3688073109659804,
+        "rmse": 1.0184972680704174,
+        "smape": 1.1140994861871256,
+        "mase": 1.2027401187331588
+      }
+    }
+  },
+  "favorable_common_steps_out_of20": {
+    "embedding_vs_ordinary": 9,
+    "embedding_dynamic_vs_static": 10,
+    "ordinary_dynamic_vs_static": 9
+  },
+  "selected_quarter_NMAE_gain_percent": {
+    "embedding_dynamic_vs_ordinary_dynamic": {
+      "load": [
+        -29.525545342119266,
+        5.712244161650859,
+        3.5291546851286992,
+        -42.699439664844775
+      ],
+      "wind": [
+        -8.5120254259609,
+        -3.9672539127003636,
+        1.8507603483243984,
+        17.906231997856537
+      ],
+      "pv": [
+        -5.279240435064025,
+        0.28512258795473366,
+        2.602331477241693,
+        -2.548613021112689
+      ],
+      "net_load": [
+        -1.3099648679511189,
+        3.670241818798947,
+        6.1381516157621,
+        0.5044855706576423
+      ]
+    },
+    "embedding_dynamic_vs_embedding_static": {
+      "load": [
+        -50.974886027073005,
+        -4.1682158416650905,
+        0.8772774677897388,
+        -63.82655306289027
+      ],
+      "wind": [
+        -17.29955133236769,
+        -5.537789505644097,
+        3.9360888148928352,
+        33.00041912528614
+      ],
+      "pv": [
+        -3.991113187071349,
+        3.250977855499504,
+        2.6789548261284657,
+        -1.859676302168367
+      ],
+      "net_load": [
+        7.540414940872786,
+        7.176136160663371,
+        5.288046874290709,
+        8.49933169146172
+      ]
+    },
+    "ordinary_dynamic_vs_ordinary_static": {
+      "load": [
+        -16.492386860312426,
+        -0.17444282046767956,
+        -4.832494751760508,
+        -14.119237903867067
+      ],
+      "wind": [
+        0.986878858652418,
+        1.8093393820073134,
+        -1.6107333653542444,
+        9.057469332080448
+      ],
+      "pv": [
+        0.40938717268470537,
+        2.571345643320555,
+        -0.19102581940459995,
+        3.1538957452173833
+      ],
+      "net_load": [
+        -0.7148799457751709,
+        -1.6123900332801755,
+        -1.8865337881412092,
+        -1.3815422634100738
+      ]
+    }
+  },
+  "selected_asset_NMAE_gain": {
+    "embedding_dynamic_vs_ordinary_dynamic": {
+      "load": {
+        "gain_percent_by_asset": {
+          "zone_1": -16.609629703214203
+        },
+        "favorable": 0,
+        "total": 1
+      },
+      "wind": {
+        "gain_percent_by_asset": {
+          "turbine_106": -0.8780888196832093,
+          "turbine_11": -3.4048832782179517,
+          "turbine_126": -4.14709080539164,
+          "turbine_129": -1.052040426023848,
+          "turbine_130": 0.6902526297048572,
+          "turbine_134": -3.1222126921474747,
+          "turbine_28": -0.38638755132576197,
+          "turbine_29": -0.6847389262200743
+        },
+        "favorable": 1,
+        "total": 8
+      },
+      "pv": {
+        "gain_percent_by_asset": {
+          "pv_site_0": -1.4156518962599174,
+          "pv_site_11": -4.583306382087926,
+          "pv_site_13": -2.0112613375165678,
+          "pv_site_17": -1.3437872244124627,
+          "pv_site_2": -0.42793021532594455,
+          "pv_site_21": -2.6387816971505718,
+          "pv_site_23": -0.7366982447499337,
+          "pv_site_26": 5.275373974185471
+        },
+        "favorable": 1,
+        "total": 8
+      },
+      "net_load": {
+        "gain_percent_by_asset": {
+          "A": -1.8384633953119955,
+          "B": -1.3454472193207945,
+          "C": -0.8884234667001945,
+          "D": 10.265387012637085,
+          "E": -3.9697405882836323,
+          "F": 9.352032700253742,
+          "G": -3.426739294874448,
+          "H": 1.1582396061848188
+        },
+        "favorable": 3,
+        "total": 8
+      }
+    },
+    "embedding_dynamic_vs_embedding_static": {
+      "load": {
+        "gain_percent_by_asset": {
+          "zone_1": -29.660013626895164
+        },
+        "favorable": 0,
+        "total": 1
+      },
+      "wind": {
+        "gain_percent_by_asset": {
+          "turbine_106": 0.7006178260646978,
+          "turbine_11": -5.318405330382925,
+          "turbine_126": -4.856979461316269,
+          "turbine_129": 1.9626796361938537,
+          "turbine_130": 2.2676962149617896,
+          "turbine_134": -1.7738726190580367,
+          "turbine_28": -2.5783920372139058,
+          "turbine_29": -3.8914923167506554
+        },
+        "favorable": 3,
+        "total": 8
+      },
+      "pv": {
+        "gain_percent_by_asset": {
+          "pv_site_0": -2.403899148192501,
+          "pv_site_11": -1.9933167092914816,
+          "pv_site_13": -1.5966472226771833,
+          "pv_site_17": 0.5106468046357615,
+          "pv_site_2": 1.7796624199548416,
+          "pv_site_21": -1.0691261517427941,
+          "pv_site_23": 0.7528774244283332,
+          "pv_site_26": 4.8417784125550645
+        },
+        "favorable": 4,
+        "total": 8
+      },
+      "net_load": {
+        "gain_percent_by_asset": {
+          "A": 3.5773587127148843,
+          "B": 8.196234107593458,
+          "C": 11.992061360354533,
+          "D": 1.2793351713092926,
+          "E": 10.816945123579236,
+          "F": 3.6543103301436064,
+          "G": 12.404181875281317,
+          "H": 9.105762818411057
+        },
+        "favorable": 8,
+        "total": 8
+      }
+    },
+    "ordinary_dynamic_vs_ordinary_static": {
+      "load": {
+        "gain_percent_by_asset": {
+          "zone_1": -9.056846768240167
+        },
+        "favorable": 0,
+        "total": 1
+      },
+      "wind": {
+        "gain_percent_by_asset": {
+          "turbine_106": 0.6359380313782137,
+          "turbine_11": 1.6913504991029948,
+          "turbine_126": 4.079239157095593,
+          "turbine_129": 1.1691558816877112,
+          "turbine_130": -0.8106382448199279,
+          "turbine_134": 5.188088520917411,
+          "turbine_28": 1.097319106783634,
+          "turbine_29": 1.7107533692367172
+        },
+        "favorable": 7,
+        "total": 8
+      },
+      "pv": {
+        "gain_percent_by_asset": {
+          "pv_site_0": 0.5651773687822326,
+          "pv_site_11": 7.0142375760734454,
+          "pv_site_13": 1.0720517246191386,
+          "pv_site_17": -0.2946255106067497,
+          "pv_site_2": 0.8240435344925245,
+          "pv_site_21": 0.2816046756422774,
+          "pv_site_23": 0.09110535308558543,
+          "pv_site_26": 1.7289051750208007
+        },
+        "favorable": 7,
+        "total": 8
+      },
+      "net_load": {
+        "gain_percent_by_asset": {
+          "A": -0.0144006175374356,
+          "B": -2.4022903638202475,
+          "C": 1.346069350919188,
+          "D": -1.3982699702479673,
+          "E": -0.5849197466118339,
+          "F": -4.384445275355664,
+          "G": -1.6335054290691264,
+          "H": -0.3237580045124977
+        },
+        "favorable": 1,
+        "total": 8
+      }
+    }
+  },
+  "secondary_vs_old_TSG_degradation_percent": {
+    "ordinary_dynamic": {
+      "original_TSG_dual": -0.477473912172921,
+      "numeric_state": 1.617160746882118,
+      "concat_only": 3.1333640571099997
+    },
+    "ordinary_static": {
+      "original_TSG_dual": 0.3371081619139904,
+      "numeric_state": 2.4488871993534778,
+      "concat_only": 3.9775004843451978
+    },
+    "embedding_dynamic": {
+      "original_TSG_dual": 1.7832568994588627,
+      "numeric_state": 3.9254727976462123,
+      "concat_only": 5.476117833530325
+    },
+    "embedding_static": {
+      "original_TSG_dual": -0.38660880451240054,
+      "numeric_state": 1.7099382779033112,
+      "concat_only": 3.2275258976180554
+    }
+  },
+  "secondary_comparison_limit": "Same architecture/input/recipe but different semantic normalization/pooling, encoder host runtime and selected steps. These are strong scientific reference scores, not a pure single-factor causal contrast.",
+  "visual_review": {
+    "files": 4,
+    "all_TRAIN_VAL_ALL_METRICS_viewed": true,
+    "observations": [
+      "Large128gridvalidation oscillations with constantLR inWindandLoad.",
+      "PVTRAINNMAEfallswhileVALNMAEhaslittlepersistentlateimprovement.",
+      "NetTRAINVALcurvesarecloserthanLoad/PV; conclusionsremain taskdependent."
+    ]
+  },
+  "no_additional_optimizer_updates": true
+}

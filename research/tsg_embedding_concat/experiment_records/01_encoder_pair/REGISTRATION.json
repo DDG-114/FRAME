@@ -1,0 +1,32 @@
+{
+  "study": "tsg_embedding_encoder_pair_v2_s2027_20261102",
+  "seed": 2027,
+  "files": {
+    "audit.py": "8eba2fac699f7c79ab6dddf7ad58ec8a1c824384585dfed1dea6622d197595d0",
+    "audit_cache.py": "c80b2773e9e91d528f0a3b24cd01be22a98840807da75dc0aaf3c7f40125d9a8",
+    "cache_tools.py": "0e7e31d406cfcbaf00685453f4073d09220d4fb0ff3607a89a907e8d6903430a",
+    "checks.py": "6e8047c4edc708ed37de4c69d261b5958bb8754bd21b0ba219152fcc17ca9254",
+    "data.py": "f05a8da92b57202907b4aae25192bad56034bf89d729c09e3fd51325f6f423b6",
+    "encode_pair.py": "920e4fa2ca2ec57e446714e8c29b727831831f0cb59178fb125ba2eb9b52f0af",
+    "gpu_entry.py": "515a183270c1453d347e9008c675827026858a463af75ba1de6d1bd1d54e2a9b",
+    "manage.py": "a56556e6fcac525e2330b9a94a9f1b8f384cb044bdd50dba62c975da61adf9e0",
+    "model.py": "927a16101fd27bce18b063453607ee47e4779fe713bf1cb9584d53208bb04aab",
+    "pipeline.py": "58a0aa428067c48a884281f079fd025cb9828bddd94f084b330cb43784a9786b",
+    "plot.py": "6b2eb25cedea52c6bfea1eaebb47b868676d89b6f1c1a98dcfac3ef2c78a0b28",
+    "test_ablation_controls.py": "660435d0b068abe8a5137793148a5ac899b8dd2dbf8bc65dd7c1fecc82f6b0f1",
+    "test_data_contract.py": "098e570b527c6ead7872debea3814dd18f715fbdc8146d7f7d1bd0b4bc10f87a",
+    "test_encoder_pair.py": "ea1bdfbc38396152192b1dd560b2d9d2ae4821098a8c7d5202c587dd35f2f6df",
+    "test_paper_model.py": "688696d3353f92e07d1df49f4aaaad1dbf3933dc2692fc627813ee4e9f2d30d8",
+    "train.py": "b6ab5ee4b549f0fa26e23f70492355641d6d66c8c6d66752ea226b31a56e2e9b",
+    "PLAN.json": "6826dc86a6ebdd6bb56143ec0c711a0a55b822bcd70b36b3757091776993dbc2",
+    "INPUT_CONTRACT.json": "24eef4ca875cf873f218caefa8222d3c2566e248dd8613ae091a29ea4b9ec038",
+    "TEXT_CORPUS.json": "193332cd3fdbf4ca23e6b8bed02f2e45099b438eff36dc408e5866675125b663",
+    "TEXT_ROWS.npz": "ad3f1212d5b619c3c5eff3edd250bdb82a752390fe692f43750f844029b7b94d",
+    "EXPECTED_MODELS.json": "1ccac7024db39d0866c32510750358a7ccd8e2bae5f174103cd0392b24c527a1",
+    "CPU_ACCEPTANCE.json": "f2d553dd5354d4ccbb962cd66bda6a9be62931f3df778b4969df4c0925e2c187",
+    "USER_AUTHORIZATION.json": "70ce059483cb86b08fd06a926afbb791d41efe0f0de6d5e3f23368d7e426ac1c",
+    "CONTROL_SOURCE.json": "2d735e5da2c6721e16f95dbae6d45b3f08697ad2aefa5f6896d717e2c9d1a32e"
+  },
+  "formal_updates_at_registration": 0,
+  "qualification_updates_at_registration": 0
+}

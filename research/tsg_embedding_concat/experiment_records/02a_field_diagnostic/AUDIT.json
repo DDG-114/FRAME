@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "raw_files": 64,
+  "native_metric_atol": 1e-14,
+  "correct16raw_bitwise_exact": true,
+  "actual_input_bytes_exact": true,
+  "unchanged_source_checkpoint_and_audit_SHA": true,
+  "no_op_fields_forecasts_exact": true,
+  "optimizer_updates": 0,
+  "qualification_updates": 0,
+  "formal_updates": 0
+}

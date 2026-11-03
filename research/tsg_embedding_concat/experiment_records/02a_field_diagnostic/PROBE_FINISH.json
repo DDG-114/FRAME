@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "raw_files": 64,
+  "forward_windows": 148896,
+  "correct16raw_bitwise_exact": true,
+  "optimizer_updates": 0,
+  "qualification_updates": 0,
+  "formal_updates": 0
+}

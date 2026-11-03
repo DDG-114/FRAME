@@ -8,3 +8,4 @@ ordinary_qwen3_8b/manuscript/Figures/*.pdf binary
 ordinary_qwen3_8b/manuscript/IEEEtran.* -whitespace
 ordinary_qwen3_8b/manuscript/paper.tex -whitespace
 ordinary_qwen3_8b/evidence/paper_source_snapshot.tex -whitespace
+experiment_records/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

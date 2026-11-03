@@ -1,0 +1,70 @@
+{
+  "status": "complete_exploratory_comparison",
+  "source_study": "tsg_embedding_vs_mlp_concat_s2027_20261103",
+  "relative_mean_nmae_gain_percent": 3.110475791585865,
+  "paired_origin_block_CI95": [
+    -0.23668641214896755,
+    6.47387151741381
+  ],
+  "all_selected_mean_VAL_NMAE": {
+    "embedding_concat": 0.3470036238013211,
+    "typed_schema_dynamic": 0.3581435935787023
+  },
+  "favorable_tasks": 4,
+  "practical_targets_met": true,
+  "same_step_win_steps": [
+    128,
+    256,
+    384,
+    512,
+    1024,
+    1152,
+    1408,
+    1536,
+    1920,
+    2048,
+    2176,
+    2304,
+    2432
+  ],
+  "last8_wins": 5,
+  "final_step_gain_percent": -5.455221721567005,
+  "bootstrap_design": {
+    "load": {
+      "origins": 365,
+      "median_spacing_seconds": 86400.0,
+      "circular_block_origins": 7,
+      "block_days": 7,
+      "replicates": 5000,
+      "same_origin_assets_resampled_together": true
+    },
+    "wind": {
+      "origins": 23,
+      "median_spacing_seconds": 86400.0,
+      "circular_block_origins": 7,
+      "block_days": 7,
+      "replicates": 5000,
+      "same_origin_assets_resampled_together": true
+    },
+    "pv": {
+      "origins": 52,
+      "median_spacing_seconds": 86400.0,
+      "circular_block_origins": 7,
+      "block_days": 7,
+      "replicates": 5000,
+      "same_origin_assets_resampled_together": true
+    },
+    "net_load": {
+      "origins": 364,
+      "median_spacing_seconds": 86400.0,
+      "circular_block_origins": 7,
+      "block_days": 7,
+      "replicates": 5000,
+      "same_origin_assets_resampled_together": true
+    }
+  },
+  "seed": 2027,
+  "all16_reported": true,
+  "interpretation": "Matched factuality and concat fusion. MLP retains 16384 additional allocated parameters. Exploratory validation after reused selection.",
+  "source_results_sha256": "c059935a4f9af57dc86e6f17eb2903ae49ac27f28ba100b9953a78355959994f"
+}

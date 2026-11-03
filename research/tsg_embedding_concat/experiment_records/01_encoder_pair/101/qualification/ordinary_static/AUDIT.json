@@ -1,0 +1,86 @@
+{
+  "status": "all_candidates_independently_verified",
+  "arm": "ordinary_static",
+  "mode": "dual",
+  "actual_semantic_input_bytes_exact": true,
+  "formal_updates": 0,
+  "qualification_updates": 3,
+  "verified": [
+    {
+      "step": 0,
+      "raw_files": 8,
+      "checkpoint_sha256": "f0df28f384209a4f5d4877db996b70922a4732bd77c87ec21a9049b9c8222899"
+    },
+    {
+      "step": 3,
+      "raw_files": 8,
+      "checkpoint_sha256": "4cdea8d30d8e94a219f18ebd305680cb1404c343abeb7b6be37513e6761ee83f"
+    }
+  ],
+  "raw_count": 16,
+  "selected": {
+    "step": 3,
+    "score": 1.2375648245859259,
+    "mean_mase": 3.8903569854992837,
+    "train": {
+      "load": {
+        "nmae": 0.3702907762490489,
+        "rmse": 67.1681177617718,
+        "smape": 44.349157169558474,
+        "mase": 3.226143515068859
+      },
+      "wind": {
+        "nmae": 1.487171995752957,
+        "rmse": 763.0057072504727,
+        "smape": 106.26409167078184,
+        "mase": 1.556609311679269
+      },
+      "pv": {
+        "nmae": 1.9532648077346269,
+        "rmse": 0.3430182792429327,
+        "smape": 195.64159584129132,
+        "mase": 4.217819822502101
+      },
+      "net_load": {
+        "nmae": 0.4263966694896689,
+        "rmse": 613.9578232579323,
+        "smape": 36.333438408578075,
+        "mase": 5.598928203854358
+      }
+    },
+    "val": {
+      "load": {
+        "nmae": 0.4176993672677812,
+        "rmse": 84.57400820446551,
+        "smape": 51.06845286317307,
+        "mase": 4.100148212006536
+      },
+      "wind": {
+        "nmae": 1.92552203415398,
+        "rmse": 812.6316629007574,
+        "smape": 112.67995166117585,
+        "mase": 1.679896908023291
+      },
+      "pv": {
+        "nmae": 2.127510855922707,
+        "rmse": 0.32006338305037807,
+        "smape": 198.24097716362888,
+        "mase": 3.940294451577559
+      },
+      "net_load": {
+        "nmae": 0.4795270409992352,
+        "rmse": 629.8717376922475,
+        "smape": 38.7667998221504,
+        "mase": 5.841088370389748
+      }
+    },
+    "eligible": true
+  },
+  "TEST_evaluated": false,
+  "selection": "four-task VAL asset-macro NMAE, earliest tie",
+  "candidate_metric_atol": 1e-14,
+  "cohort_exact": true,
+  "sampler_exact": true,
+  "optimizer_ages_exact": true,
+  "cold_exact": true
+}

@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "modified_forward_windows": 55836,
+  "source_replay_windows": 16,
+  "modified_replay_windows": 48,
+  "postload_GPU_seconds": 1011.2946557998657,
+  "optimizer_updates": 0,
+  "qualification_updates": 0,
+  "formal_updates": 0,
+  "original16_encoder_vectors_bitwise_exact": true
+}

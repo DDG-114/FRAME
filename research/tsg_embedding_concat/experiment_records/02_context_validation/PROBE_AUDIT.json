@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "raw_files": 48,
+  "all_metrics_native_atol": 1e-14,
+  "correct16raw_bitwise_exact": true,
+  "all_input_bytes_bound_to_verified_caches": true,
+  "frozen_checkpoint_SHA_unchanged": true,
+  "optimizer_updates": 0
+}

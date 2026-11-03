@@ -1,0 +1,38 @@
+{
+  "study": "tsg_semantic_field_diagnostic_s2027_20261103",
+  "seed": 2027,
+  "hypothesis": "Which coarse field actually changes forecasts in the frozenEmbedding and same-contentMLP models: level,trend,orweather? Factualuse can exist without overallgain; isolatefields before changingsemanticcontent.",
+  "main_model": "OriginalTSG model.py/data.py unchanged; both source checkpoints selected1920. Allparameters frozen; no optimizer constructed.",
+  "corpus": {
+    "source": "Original frozen TSG complete TEXT_CORPUS.json, not the later difference-text corpus",
+    "windows": 18612,
+    "no_new_information": true,
+    "instruction": "Represent this energy forecasting context, preserving asset identity, observation availability, current operating state, and the direction and magnitude of changes.",
+    "same_instruction": true,
+    "tokenizer": "Pinned Qwen3-Embedding-8B tokenizer; same token IDs and official terminal token for both models; no chat template",
+    "pooling": "last valid token of final layer, FP32 thenL2",
+    "max_tokens": 512,
+    "truncation": false,
+    "batch": 16,
+    "dtype": "BF16",
+    "attention": "eager",
+    "LoRA": false,
+    "encoder_frozen": true
+  },
+  "representation": "Same publicEmbedding8B/BF16/eager/tokenizer/instruction/EOS/lastvalidFP32L2/canonicalbatch16/max512. MLPfeatures identicaltokenfrequencyhashandnormalization asregisteredcontrol.",
+  "budget": {
+    "new_formal": 0,
+    "new_qualification": 0,
+    "new_optimizer_updates": 0,
+    "new_forecasting_weights": 0,
+    "modified_encoder_forward_windows": 55836,
+    "original_encoder_same_batch_replay_windows": 16,
+    "modified_encoder_replay_windows": 48,
+    "frozen_forecaster_forward_windows": 148896,
+    "raw_files": 64,
+    "reused_training_formal": 5120,
+    "reused_training_qualification": 6,
+    "existing_embedding_track_formal": 17920,
+    "existing_embedding_track_qualification": 21
+  }
+}

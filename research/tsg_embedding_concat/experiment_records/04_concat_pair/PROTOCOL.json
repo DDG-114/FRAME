@@ -1,0 +1,114 @@
+{
+  "study": "tsg_typed_concat_pair_s2027_20261103",
+  "seed": 2027,
+  "hypothesis": "Typed current facts show a positive but unstable mean effect in dual fusion. The original controlled coarse-facts experiment favored concat over the product path. Test whether disabling only the product path improves typed forecasting and changes dynamic-fact benefit, without attributing a fusion benefit to language pretraining.",
+  "primary_comparisons": [
+    "concat dynamic vs concat usual",
+    "concat dynamic vs reused typed dual dynamic",
+    "concat usual vs reused typed dual usual",
+    "fusion-by-factuality interaction"
+  ],
+  "architecture": {
+    "model_py_sha256": "927a16101fd27bce18b063453607ee47e4779fe713bf1cb9584d53208bb04aab",
+    "data_py_sha256": "f05a8da92b57202907b4aae25192bad56034bf89d729c09e3fd51325f6f423b6",
+    "dual_parameters": 1937797,
+    "schema_parameters": 1954181,
+    "common": "Original four-layer width128/heads4/rank8 dual-gated PaperForecaster. Same numerical inputs/22futureinterface/masks/loss/dropout/optimizer/sampling. Schema only retains existing schema_output.weight128x128 extra16384parameters with forked initializerRNG."
+  },
+  "arms": {
+    "typed_embedding_dynamic": {
+      "mode": "concat_only",
+      "encoder": "embedding",
+      "factuality": "dynamic",
+      "corpus": "TEXT_TYPED.json",
+      "parent_manifest_sha256": "fd27347be1beace720fbefe2746f3febbd2abdac97d567969a465744f5dd9a47",
+      "vectors_sha256": "ab398b21ebcbde347423b9ad33d6578584407a1c89d98a38a6fa922566e70747"
+    },
+    "typed_embedding_usual": {
+      "mode": "concat_only",
+      "encoder": "embedding",
+      "factuality": "usual",
+      "corpus": "TEXT_USUAL.json",
+      "parent_manifest_sha256": "bb0bce04d5f8792ba607dd3f4ed465f322767647f450c9e87edef050183320a5",
+      "vectors_sha256": "ee43d75d9ad6e732ff8a655fdb1a33c21b5cd90d5e70e50fd870af336691a366"
+    }
+  },
+  "corpus": {
+    "source": "Original frozen TSG complete TEXT_CORPUS.json, not the later difference-text corpus",
+    "windows": 18612,
+    "no_new_information": true,
+    "instruction": "Represent this energy forecasting context, preserving asset identity, observation availability, current operating state, and the direction and magnitude of changes.",
+    "same_instruction": true,
+    "tokenizer": "Pinned Qwen3-Embedding-8B tokenizer; same token IDs and official terminal token for both models; no chat template",
+    "pooling": "last valid token of final layer, FP32 thenL2",
+    "max_tokens": 512,
+    "truncation": false,
+    "batch": 16,
+    "dtype": "BF16",
+    "attention": "eager",
+    "LoRA": false,
+    "encoder_frozen": true
+  },
+  "facts": {
+    "target": "Latest, originpast24hmean/peak, signed1h/3h/24hchanges andlastday-vs-previousdaymeanchange onoriginalTRAINz.",
+    "load": "Spatialmean oforiginal25 separatelyTRAINstandardizedtemperaturechannels; recent24hmeanand1hchange. Physicaltemperatureunitunverified, staysz.",
+    "wind": "Separatelynamedwind-speed24hmean/1hchange(m/s), recentrelativewinddirection(degrees, noangleaveraging), externaltemperature24hmean(C), recentthreebladepitchmean(degrees). PhysicalvaluesreconstructedfromoriginalinputzusingfrozenoriginalTRAINoffset/scale. No inventedcurtailment/outagecauses.",
+    "pv": "Targethistory dailymean/peak/daymeanchange, no inventedweather/irradiance.",
+    "net_load": "Existingforecastvalidlead22..47.5hsolarmean/peak inoriginalTRAINz,radiationphysicalunitunverified;100mwindforecastmean/lastminusfirst in m/s usingfrozenTRAINscale. Effectivepublication mustprecedeorigin."
+  },
+  "usual": "Per-field lowerTRAINmedian conditioned onoriginalasset/calendar,>=16uniqueorigins andsamepredeclaredbackoff; keep recipientfieldmissingness andallcurrentmetadata/counts/age/availability. NoVAL fitting.",
+  "schema": "No new schema arms. Round 3 complete schema results remain a stronger-than-token-frequency secondary reference.",
+  "training": {
+    "batch": {
+      "load": 16,
+      "wind": 2,
+      "pv": 16,
+      "net_load": 16
+    },
+    "microbatch": 4,
+    "optimizer": "AdamW",
+    "lr": 0.0003,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "weight_decay": 0.0001,
+    "clip": 1.0,
+    "schedule": "constant",
+    "BF16": true,
+    "EMA": false,
+    "language_LoRA": false,
+    "loss": "equal-task TRAIN-mean-absolute-scale masked Huber1 plus1e-4 pre-strength branch energy"
+  },
+  "selection": {
+    "metric": "complete four-task VAL asset-macro NMAE mean",
+    "earliest_tie": true,
+    "every_updates": 128,
+    "eligible": "128..2560",
+    "shared_checkpoint": true,
+    "TEST": false
+  },
+  "budget": {
+    "new_formal": 5120,
+    "new_qualification": 6,
+    "formal_per_arm": 2560,
+    "qualification_per_arm": 3,
+    "new_encoding": 0,
+    "new_probe_forward": 0,
+    "previous_track_formal": 28160,
+    "previous_track_qualification": 33,
+    "registered_track_formal": 33280,
+    "registered_track_qualification": 39,
+    "formal_raw": 336,
+    "qualification_raw": 32,
+    "candidate_complete_checkpoints": 46,
+    "selected_copies": 4,
+    "cold_raw": 32
+  },
+  "success": {
+    "primary": "Concat dynamic must improve mean VAL asset-macro NMAE by at least 0.5% over concat usual and over matched typed dual dynamic; at least 3/4 tasks improve NMAE in each comparison. All 16 metrics and interactions reported. Practical signals do not imply statistically independent confirmation.",
+    "global_reference": "Promotion additionally requires beating the historical coarse concat 0.3429642435072586 and numeric-state 0.3480815240676827 references on complete-VAL mean NMAE. A fusion benefit shared by dynamic and usual is not a dynamic fact benefit. No direct language-specific claim from this round.",
+    "uncertainty": "Same-origin paired 7-day circular block, 5000 draws, seed 2027, exploratory after repeated VAL. No TEST or new seed. No empirical results used to select checkpoints beyond the fixed rule."
+  },
+  "change": "Existing concat_only: c=LayerNorm(W4[SiLU(W1[s,p,v]), 0]); remove only the contribution W2(s) elementwise-times W3(p). Rank and strength gates, numeric backbone, loss, LR, allocated parameters remain unchanged. W2/W3 have no gradients or Adam state."
+}

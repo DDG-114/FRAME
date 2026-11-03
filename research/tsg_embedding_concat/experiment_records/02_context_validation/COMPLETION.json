@@ -1,0 +1,260 @@
+{
+  "status": "complete_independently_verified_not_promoted",
+  "study": "tsg_context_fact_validation_s2027_20261102",
+  "registered_formal": 7680,
+  "actual_formal": 7680,
+  "actual_qualification": 9,
+  "source_reused_formal": 2560,
+  "source_reused_qualification": 3,
+  "selected_steps": {
+    "embedding_usual": 2176,
+    "schema_dynamic": 1920,
+    "schema_usual": 2176,
+    "embedding_dynamic": 1920
+  },
+  "selected_mean_VAL_NMAE": {
+    "embedding_usual": 0.36029726327858314,
+    "schema_dynamic": 0.35859838074276223,
+    "schema_usual": 0.36092124356332145,
+    "embedding_dynamic": 0.361745369608592
+  },
+  "effects": {
+    "embedding_dynamic_vs_usual_percent_gain": {
+      "point": -0.401919880498558,
+      "paired_origin_block_CI95": [
+        -6.126768498760233,
+        7.995876157935823
+      ],
+      "positive_favors_embedding_or_dynamic": true
+    },
+    "schema_dynamic_vs_usual_percent_gain": {
+      "point": 0.6435927122565355,
+      "paired_origin_block_CI95": [
+        -2.133685059604556,
+        4.678941937102925
+      ],
+      "positive_favors_embedding_or_dynamic": true
+    },
+    "embedding_vs_schema_dynamic_percent_gain": {
+      "point": -0.8775803335506982,
+      "paired_origin_block_CI95": [
+        -3.5319125145246826,
+        3.4676716653070696
+      ],
+      "positive_favors_embedding_or_dynamic": true
+    },
+    "dynamic_advantage_interaction_log_percent": {
+      "point": -1.0467870396292849,
+      "paired_origin_block_CI95": [
+        -4.651219183648474,
+        4.0909924546772665
+      ],
+      "positive_favors_embedding_or_dynamic": true
+    }
+  },
+  "native_metric_bootstrap_CIs": {
+    "embedding_dynamic_vs_usual_percent_gain": {
+      "point": -0.401919880498558,
+      "paired_origin_block_CI95": [
+        -6.126768498760233,
+        7.995876157935823
+      ],
+      "positive_favors_embedding_or_dynamic": true
+    },
+    "schema_dynamic_vs_usual_percent_gain": {
+      "point": 0.6435927122565355,
+      "paired_origin_block_CI95": [
+        -2.133685059604556,
+        4.678941937102925
+      ],
+      "positive_favors_embedding_or_dynamic": true
+    },
+    "embedding_vs_schema_dynamic_percent_gain": {
+      "point": -0.8775803335506982,
+      "paired_origin_block_CI95": [
+        -3.5319125145246826,
+        3.4676716653070696
+      ],
+      "positive_favors_embedding_or_dynamic": true
+    },
+    "dynamic_advantage_interaction_log_percent": {
+      "point": -1.0467870396292849,
+      "paired_origin_block_CI95": [
+        -4.651219183648474,
+        4.0909924546772665
+      ],
+      "positive_favors_embedding_or_dynamic": true
+    }
+  },
+  "full_collection_sha_rechecked": 805,
+  "new_formalraw": 504,
+  "new_qualraw": 48,
+  "new_candidatecp": 69,
+  "probe_raw": 48,
+  "probe_forward_windows": 111672,
+  "probe_optimizer_updates": 0,
+  "probe_effects": {
+    "embedding_dynamic": {
+      "train": {
+        "embedding_dynamic": {
+          "mean_NMAE": 0.3134885753903838,
+          "trained_condition_gain_percent": 0.0,
+          "task_NMAE_gain_percent": {
+            "load": 0.0,
+            "wind": 0.0,
+            "pv": 0.0,
+            "net_load": 0.0
+          }
+        },
+        "embedding_usual": {
+          "mean_NMAE": 0.314909395867186,
+          "trained_condition_gain_percent": 0.4511838946213875,
+          "task_NMAE_gain_percent": {
+            "load": 5.064364206840111,
+            "wind": -0.01261482733201369,
+            "pv": 0.1160686272097422,
+            "net_load": 0.055448286855031004
+          }
+        },
+        "embedding_shifted": {
+          "mean_NMAE": 0.316494327711763,
+          "trained_condition_gain_percent": 0.9497017981682787,
+          "task_NMAE_gain_percent": {
+            "load": 8.380880640919585,
+            "wind": 0.030367931021690886,
+            "pv": 0.37214497854491935,
+            "net_load": 1.7542469991857157
+          }
+        }
+      },
+      "val": {
+        "embedding_dynamic": {
+          "mean_NMAE": 0.36174536960859194,
+          "trained_condition_gain_percent": 0.0,
+          "task_NMAE_gain_percent": {
+            "load": 0.0,
+            "wind": 0.0,
+            "pv": 0.0,
+            "net_load": 0.0
+          }
+        },
+        "embedding_usual": {
+          "mean_NMAE": 0.36374809742770736,
+          "trained_condition_gain_percent": 0.5505809743825418,
+          "task_NMAE_gain_percent": {
+            "load": 6.087774510473009,
+            "wind": 0.01195009960920368,
+            "pv": 0.04370613851704119,
+            "net_load": 0.02500948899625266
+          }
+        },
+        "embedding_shifted": {
+          "mean_NMAE": 0.3634487502506883,
+          "trained_condition_gain_percent": 0.46867148144585924,
+          "task_NMAE_gain_percent": {
+            "load": 3.8385751075924235,
+            "wind": 0.0067454751909057364,
+            "pv": 0.1859101528267515,
+            "net_load": 1.3030584735533313
+          }
+        }
+      }
+    },
+    "embedding_usual": {
+      "train": {
+        "embedding_dynamic": {
+          "mean_NMAE": 0.3062069680333978,
+          "trained_condition_gain_percent": 0.2535422589839298,
+          "task_NMAE_gain_percent": {
+            "load": -0.07343040021305924,
+            "wind": 0.002791244848043828,
+            "pv": 0.48950102208337176,
+            "net_load": 1.4632042753412011
+          }
+        },
+        "embedding_usual": {
+          "mean_NMAE": 0.30543060396947974,
+          "trained_condition_gain_percent": 0.0,
+          "task_NMAE_gain_percent": {
+            "load": 0.0,
+            "wind": 0.0,
+            "pv": 0.0,
+            "net_load": 0.0
+          }
+        },
+        "embedding_shifted": {
+          "mean_NMAE": 0.3075311051258456,
+          "trained_condition_gain_percent": 0.6830207160691271,
+          "task_NMAE_gain_percent": {
+            "load": 2.9575475540296714,
+            "wind": 0.0033501953179193578,
+            "pv": 0.40420482222377485,
+            "net_load": 4.991031412259717
+          }
+        }
+      },
+      "val": {
+        "embedding_dynamic": {
+          "mean_NMAE": 0.360157075719597,
+          "trained_condition_gain_percent": -0.03892400522911288,
+          "task_NMAE_gain_percent": {
+            "load": -1.2902496982596823,
+            "wind": 0.0014857186916850118,
+            "pv": -0.2389185429805929,
+            "net_load": 2.182147552918723
+          }
+        },
+        "embedding_usual": {
+          "mean_NMAE": 0.36029726327858314,
+          "trained_condition_gain_percent": 0.0,
+          "task_NMAE_gain_percent": {
+            "load": 0.0,
+            "wind": 0.0,
+            "pv": 0.0,
+            "net_load": 0.0
+          }
+        },
+        "embedding_shifted": {
+          "mean_NMAE": 0.36117605801680785,
+          "trained_condition_gain_percent": 0.24331478200689816,
+          "task_NMAE_gain_percent": {
+            "load": 0.8335268080086,
+            "wind": 0.005760871806659296,
+            "pv": -0.3127027924750392,
+            "net_load": 4.918350792402782
+          }
+        }
+      }
+    }
+  },
+  "strong_controls_retained": {
+    "numeric_state_mean_NMAE": 0.3480815240676827,
+    "concat_only_mean_NMAE": 0.3429642435072586
+  },
+  "non_improving_rounds_current_embedding_track": 2,
+  "conclusions": [
+    "Embeddingdynamic is0.4019percent worse inaggregate thanmetadata-preservingusual and0.8776percent worse thansame-contentMLPdynamic; primarytargetsnotmet andtemporalCIs cross0.",
+    "MLPdynamic has0.6436percent pointgain overMLPusual; doesnot establishpretrainedlanguage advantage orbeatstrongnumeric/concat.",
+    "Same-weight correctfacts can improvepredictions evenwhenretraineddynamicmodelisworsethanusual; factualdependency andgeneralizationmustnotbeconfused.",
+    "Jointfield probe showsLoad/Net sensitivitybutveryweakWind response. Isolate original3fields beforeanothertrainingconfiguration."
+  ],
+  "references": {
+    "result_sha256": "bc9ec3b229f0d6a9e02cdfa3631a623bdb4264e60ec3352b6e0ac8da7bbaa591",
+    "collection_sha256": "1f8d0b1923af6d44883ddb848031e2fd0ea65b2b524c6d93eae700c0db223eb7",
+    "probe_audit_sha256": "b406bcc8171af65ba3b626e63e73056f2a852b51b97617e1b2eb7a4892dd009b"
+  },
+  "literature_review": [
+    {
+      "url": "https://arxiv.org/html/2506.21611v2",
+      "finding": "Textgainisconditiondependentandstronglydependsoncomplementarity; redundantinputsummary isnotnewpredictiveinformation.",
+      "inference": "Our coarsehistories requirefactutilization andsame-contentnonLLMcontrols, notanassumptionthatlargerencoderhelps."
+    },
+    {
+      "url": "https://huggingface.co/Qwen/Qwen3-Embedding-8B",
+      "finding": "Modelisoptimizedfortextembedding/ranking,withlastvalidpoolingandL2example.",
+      "inference": "Retrievalqualitydoesnotguaranteeforecastingvalue. Keeptheofficialreadoutfixedforthisdiagnosisratherthansweepit."
+    }
+  ],
+  "new_TEST_reads": 0,
+  "new_seeds": 0
+}

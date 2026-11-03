@@ -1,0 +1,47 @@
+{
+  "status": "passed",
+  "windows": 18612,
+  "token_maxima": {
+    "TEXT_TYPED.json": 328,
+    "TEXT_USUAL.json": 325
+  },
+  "token_input_sha256": {
+    "TEXT_TYPED.json": "417c4cd20d95615bb4cda8a503c0983da0a9ff5b4c76ffcadf2df1c458c472e1",
+    "TEXT_USUAL.json": "b8f5bea45ddbb523d8c2c3a0f42efa22643e292915e9a09cd37b6b74f02affe2"
+  },
+  "model_files": 16,
+  "availability": {
+    "load": {
+      "windows": 2184,
+      "available_history_points": 9539712
+    },
+    "wind": {
+      "windows": 1468,
+      "available_history_points": 14309808
+    },
+    "pv": {
+      "windows": 3352,
+      "available_history_points": 563136
+    },
+    "net_load": {
+      "windows": 11608,
+      "available_history_points": 3899952
+    }
+  },
+  "all_facts_and_TRAIN_fit_exact": true,
+  "independent_scalar_target_replay": true,
+  "structured_quantized_facts_and_integer_metadata_recoverable": true,
+  "original_source_cache_sha256": "d334dc8c47bb3766b1b141370cf408194ca8fa599b84fced2338800d11da9f8a",
+  "optimizer_updates": 0,
+  "cache_manifests_sha256": {
+    "typed_embedding_dynamic": "fd27347be1beace720fbefe2746f3febbd2abdac97d567969a465744f5dd9a47",
+    "typed_embedding_usual": "bb0bce04d5f8792ba607dd3f4ed465f322767647f450c9e87edef050183320a5",
+    "typed_schema_dynamic": "bda15696256d741250f2a62c7ec0d109d2abd6ea03ec4f28751de39e1eac4981",
+    "typed_schema_usual": "530d62e42cc18d99b7539767f735061a11532e576daed35792ff918f55bd7042"
+  },
+  "registration_sha256": "eb78336343be8983bc9e3a5fccd27f100c9e787b5272177bf4daf9f4e853c4cd",
+  "seconds": 159.15337944030762,
+  "qualification_updates": 0,
+  "formal_updates": 0,
+  "new_forecasting_weights": 0
+}

@@ -1,0 +1,84 @@
+{
+  "status": "all_candidates_independently_verified",
+  "mode": "rank_only",
+  "formal_updates": 0,
+  "qualification_updates": 3,
+  "verified": [
+    {
+      "step": 0,
+      "raw_files": 8,
+      "checkpoint_sha256": "a2f0bd57b20c4e0465c6556a95b6a4fea03a4bfaa996c832f7cd5ea580704666"
+    },
+    {
+      "step": 3,
+      "raw_files": 8,
+      "checkpoint_sha256": "65318030c7cdd8a7679303891c8930ca7deb7da76d2c80ef247bbebed9136ae8"
+    }
+  ],
+  "raw_count": 16,
+  "selected": {
+    "step": 3,
+    "score": 1.2444300596325273,
+    "mean_mase": 3.938574061831747,
+    "train": {
+      "load": {
+        "nmae": 0.37646749248963596,
+        "rmse": 68.11117615618109,
+        "smape": 45.48725799098054,
+        "mase": 3.27995790722263
+      },
+      "wind": {
+        "nmae": 1.4647116361794712,
+        "rmse": 752.5730646370895,
+        "smape": 105.94513832062177,
+        "mase": 1.5332292609486893
+      },
+      "pv": {
+        "nmae": 1.9950852615986423,
+        "rmse": 0.34824371878148563,
+        "smape": 196.21555073987057,
+        "mase": 4.308043145892956
+      },
+      "net_load": {
+        "nmae": 0.4314906370127174,
+        "rmse": 618.4087260335962,
+        "smape": 36.50227622597017,
+        "mase": 5.661172536593302
+      }
+    },
+    "val": {
+      "load": {
+        "nmae": 0.4239176799690426,
+        "rmse": 85.67038094360636,
+        "smape": 52.23755437122378,
+        "mase": 4.161187336558118
+      },
+      "wind": {
+        "nmae": 1.893156271221679,
+        "rmse": 800.5415680937704,
+        "smape": 112.19671259827885,
+        "mase": 1.651765648642463
+      },
+      "pv": {
+        "nmae": 2.174650160879323,
+        "rmse": 0.32528050736148273,
+        "smape": 198.31543646157934,
+        "mase": 4.026792595572204
+      },
+      "net_load": {
+        "nmae": 0.4859961264600644,
+        "rmse": 635.5457382722104,
+        "smape": 39.00534854357298,
+        "mase": 5.914550666554202
+      }
+    },
+    "eligible": true
+  },
+  "TEST_evaluated": false,
+  "selection": "four-task VAL asset-macro NMAE, earliest tie",
+  "candidate_metric_atol": 1e-14,
+  "cohort_exact": true,
+  "sampler_exact": true,
+  "optimizer_ages_exact": true,
+  "cold_exact": true
+}

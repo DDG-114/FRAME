@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "step": 2560,
+  "checkpoint_sha256": "ef458d78124f267d60e8ef9161708a50bab006d4cf6635f67d6a9b9f5d713a00",
+  "complete_four_task_TRAIN_VAL_predictions_exact": true,
+  "optimizer_ages_exact": true,
+  "sampler_state_replayed_exact": true,
+  "full_global_RNG_restored": true,
+  "extra_optimizer_updates": 0
+}

@@ -1,0 +1,49 @@
+{
+  "status": "passed",
+  "all_fields_metadata_and_donors_exact": true,
+  "all_schema_vectors_byte_exact": true,
+  "unchanged_text_vectors_bitwise_exact": true,
+  "caches": {
+    "embedding_dynamic/complete": {
+      "status": "passed",
+      "manifest_sha256": "01148b31a7ef58d9e663183277e452efe270c4aa4decda952eebc8a17ae04cd7",
+      "vectors_sha256": "d334dc8c47bb3766b1b141370cf408194ca8fa599b84fced2338800d11da9f8a"
+    },
+    "embedding_dynamic/level": {
+      "status": "passed",
+      "manifest_sha256": "84a8fcbf44cd77556a7d6bd2f690aca3a2a795ebd00d5f9ad50fe8b1b0b58516",
+      "vectors_sha256": "1180724b13e163dd7d6ef08f24830321c67b1f3a51fcf47e8ed75cc6af6cb967"
+    },
+    "embedding_dynamic/trend": {
+      "status": "passed",
+      "manifest_sha256": "53fbc43db4dbcdb036cda7e8903c55d43b820a4e8e7c2eeb3ded5bcd77b282b0",
+      "vectors_sha256": "c87c78f34c56b8d369fd356d4edc9b95c7ce971a7d5bcd70ddefb0317e410eaf"
+    },
+    "embedding_dynamic/weather": {
+      "status": "passed",
+      "manifest_sha256": "9afb6fbfdbf2caa486be67d99eb331a2aaa638ae65b92e3ccc0c87ac5c9a7b78",
+      "vectors_sha256": "fdfaecc7170d376297560ea04f72a8e7cdb0fbef3d48c54efd8c5d8774c4d86c"
+    },
+    "schema_dynamic/complete": {
+      "status": "passed",
+      "manifest_sha256": "f3c3021a2393115ee228b71c216083338d188d9c9f4ee78c9b5f9e5f862c1e50",
+      "vectors_sha256": "01a768edc97d4a976532b50a1625969605ec7b411dba1aff3f8d507831af4164"
+    },
+    "schema_dynamic/level": {
+      "status": "passed",
+      "manifest_sha256": "34a67b7d4ee80f5c1fd6c2ba0f79094b4845ac663684e77a67af97f43633c5cb",
+      "vectors_sha256": "5ee273e7f4272728c36a4f056b9bbab7db41263fb6f9e8b16395cbd2cbc334e3"
+    },
+    "schema_dynamic/trend": {
+      "status": "passed",
+      "manifest_sha256": "a8f0ed7eb1590560dadf00be8d9be7798f2ec0f3e2cb65524cab641be8e6e984",
+      "vectors_sha256": "7d4be4aaa1456341ba4a49ef36c1c4d77947ffc5b1c5524327c1743612efead1"
+    },
+    "schema_dynamic/weather": {
+      "status": "passed",
+      "manifest_sha256": "14f5062c1133126f5123b80f0e0dd3d9c24b162795f863d66421e43e9ac9d0aa",
+      "vectors_sha256": "fabb148c568a17d3cdee9661b9cccfdef8c63c02fdd923bbdb7b7e7e77c7ec97"
+    }
+  },
+  "optimizer_updates": 0
+}

@@ -1,0 +1,85 @@
+{
+  "status": "complete_exploratory_comparison",
+  "source_study": "tsg_typed_fact_factorial_s2027_20261103",
+  "effects": {
+    "embedding_dynamic_vs_usual_percent_gain": {
+      "point": 0.8922122384092845,
+      "paired_origin_block_CI95": [
+        -1.6346384177564566,
+        3.4175220972911995
+      ],
+      "positive_favors_embedding_or_dynamic": true
+    },
+    "schema_dynamic_vs_usual_percent_gain": {
+      "point": 3.2489673428396038,
+      "paired_origin_block_CI95": [
+        -8.02441563697389,
+        9.280576231281877
+      ],
+      "positive_favors_embedding_or_dynamic": true
+    },
+    "embedding_vs_schema_dynamic_percent_gain": {
+      "point": 1.2267703258446727,
+      "paired_origin_block_CI95": [
+        -1.7715126810052033,
+        5.0117057117602295
+      ],
+      "positive_favors_embedding_or_dynamic": true
+    },
+    "dynamic_advantage_interaction_log_percent": {
+      "point": -2.406701781618557,
+      "paired_origin_block_CI95": [
+        -9.268190085360722,
+        9.174241959179867
+      ],
+      "positive_favors_embedding_or_dynamic": true
+    }
+  },
+  "all_selected_mean_VAL_NMAE": {
+    "typed_embedding_dynamic": 0.3511381412726299,
+    "typed_embedding_usual": 0.35429924247457945,
+    "typed_schema_dynamic": 0.3554993012084402,
+    "typed_schema_usual": 0.367437216373866
+  },
+  "favorable_tasks_dynamic_vs_usual": 2,
+  "favorable_tasks_embedding_vs_schema": 3,
+  "practical_targets_met": false,
+  "bootstrap_design": {
+    "load": {
+      "origins": 365,
+      "median_spacing_seconds": 86400.0,
+      "circular_block_origins": 7,
+      "block_days": 7,
+      "replicates": 5000,
+      "same_origin_assets_resampled_together": true
+    },
+    "wind": {
+      "origins": 23,
+      "median_spacing_seconds": 86400.0,
+      "circular_block_origins": 7,
+      "block_days": 7,
+      "replicates": 5000,
+      "same_origin_assets_resampled_together": true
+    },
+    "pv": {
+      "origins": 52,
+      "median_spacing_seconds": 86400.0,
+      "circular_block_origins": 7,
+      "block_days": 7,
+      "replicates": 5000,
+      "same_origin_assets_resampled_together": true
+    },
+    "net_load": {
+      "origins": 364,
+      "median_spacing_seconds": 86400.0,
+      "circular_block_origins": 7,
+      "block_days": 7,
+      "replicates": 5000,
+      "same_origin_assets_resampled_together": true
+    }
+  },
+  "seed": 2027,
+  "all16_reported": true,
+  "interpretation": "Exploratory intervals after reused VAL selection, not independent confirmation; structured control preserves field-bound quantized scalars; its existing extra16384parameters are declared. Strong numeric/concat references retained, no universal language reasoning claim.",
+  "source_results_sha256": "b1d5b615190297a164e30a2c6fcedf99642c95ef6bbae9a5ca7bafa5caf7606f"
+}

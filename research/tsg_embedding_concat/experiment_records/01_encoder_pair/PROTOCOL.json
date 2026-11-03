@@ -1,0 +1,111 @@
+{
+  "study": "tsg_embedding_encoder_pair_v2_s2027_20261102",
+  "seed": 2027,
+  "architecture": {
+    "source": "experiments/proposed_paper_ablation_s2027_20261030",
+    "class_name": "PaperForecaster",
+    "parameters": 1937797,
+    "mode": "dual",
+    "model_py_sha256": "927a16101fd27bce18b063453607ee47e4779fe713bf1cb9584d53208bb04aab",
+    "unchanged": true
+  },
+  "arms": {
+    "ordinary_dynamic": {
+      "encoder": "ordinary",
+      "semantic": "dynamic",
+      "formal_updates": 2560,
+      "qualification_updates": 3
+    },
+    "ordinary_static": {
+      "encoder": "ordinary",
+      "semantic": "static",
+      "formal_updates": 2560,
+      "qualification_updates": 3
+    },
+    "embedding_dynamic": {
+      "encoder": "embedding",
+      "semantic": "dynamic",
+      "formal_updates": 2560,
+      "qualification_updates": 3
+    },
+    "embedding_static": {
+      "encoder": "embedding",
+      "semantic": "static",
+      "formal_updates": 2560,
+      "qualification_updates": 3
+    }
+  },
+  "corpus": {
+    "source": "Original frozen TSG complete TEXT_CORPUS.json, not the later difference-text corpus",
+    "windows": 18612,
+    "no_new_information": true,
+    "instruction": "Represent this energy forecasting context, preserving asset identity, observation availability, current operating state, and the direction and magnitude of changes.",
+    "same_instruction": true,
+    "tokenizer": "Pinned Qwen3-Embedding-8B tokenizer; same token IDs and official terminal token for both models; no chat template",
+    "pooling": "last valid token of final layer, FP32 thenL2",
+    "max_tokens": 512,
+    "truncation": false,
+    "batch": 16,
+    "dtype": "BF16",
+    "attention": "eager",
+    "LoRA": false,
+    "encoder_frozen": true
+  },
+  "static": {
+    "estimator": "FP64 mean of each encoder normalized TRAIN vectors per task/asset, FP64 L2normalize centroid then cast onceFP32",
+    "scope": "Same asset vector for all TRAIN/VAL windows; no labels orVAL fitting",
+    "norm_matching": true
+  },
+  "training": {
+    "batch": {
+      "load": 16,
+      "wind": 2,
+      "pv": 16,
+      "net_load": 16
+    },
+    "microbatch": 4,
+    "optimizer": "AdamW",
+    "lr": 0.0003,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "weight_decay": 0.0001,
+    "clip": 1.0,
+    "schedule": "constant",
+    "BF16": true,
+    "EMA": false,
+    "language_LoRA": false,
+    "loss": "equal-task TRAIN-mean-absolute-scale masked Huber1 plus1e-4 pre-strength branch energy"
+  },
+  "selection": {
+    "metric": "complete four-task VAL asset-macro NMAE mean",
+    "earliest_tie": true,
+    "every_updates": 128,
+    "eligible": "128..2560",
+    "shared_checkpoint": true,
+    "TEST": false
+  },
+  "budget": {
+    "formal_total": 10240,
+    "qualification_total": 12,
+    "formal_per_arm": 2560,
+    "qualification_per_arm": 3,
+    "encoding_forward_windows": 37224,
+    "encoding_same_batch_replay_windows": 32,
+    "encoding_optimizer_updates": 0,
+    "old_TSG12arms_formal": 30720,
+    "old_TSG12arms_qualification": 36,
+    "older_recursive_R1_R7_formal": 48640,
+    "older_recursive_R1_R7_qualification": 57,
+    "historical_costs": "Earlier embedding/other studies retained separately"
+  },
+  "success": {
+    "primary": "Encoder main effect, dynamic/static effect within each encoder, interaction on full four-task meanVALNMAE; original unified selection",
+    "practical": "Embeddingdynamic at least1percent lower meanVALNMAE than ordinarydynamic and0.5percent lower than embeddingstatic; at least3tasks favorableNMAE is stability evidence, never a selector",
+    "metrics": "All16 and fullTRAINVAL; no requirement all16 win; report large task losses",
+    "mechanism": "Correct vs matched wrong-window frozen forecast after selection, not gate/geometry only",
+    "significance": "2027 exploratory; paired temporal-origin blocks, keep assets at same origin together; finalmultiseed requires separate authorization",
+    "failure": "Keep negative results; after2nonimproving rounds diagnose and read primary sources before successor; no blindLR/pooling/weight grid"
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "status": "complete_exploratory_comparison",
+  "source_study": "tsg_context_fact_validation_s2027_20261102",
+  "effects": {
+    "embedding_dynamic_vs_usual_percent_gain": {
+      "point": -0.401919880498558,
+      "paired_origin_block_CI95": [
+        -6.126768498760233,
+        7.995876157935823
+      ],
+      "positive_favors_embedding_or_dynamic": true
+    },
+    "schema_dynamic_vs_usual_percent_gain": {
+      "point": 0.6435927122565355,
+      "paired_origin_block_CI95": [
+        -2.133685059604556,
+        4.678941937102925
+      ],
+      "positive_favors_embedding_or_dynamic": true
+    },
+    "embedding_vs_schema_dynamic_percent_gain": {
+      "point": -0.8775803335506982,
+      "paired_origin_block_CI95": [
+        -3.5319125145246826,
+        3.4676716653070696
+      ],
+      "positive_favors_embedding_or_dynamic": true
+    },
+    "dynamic_advantage_interaction_log_percent": {
+      "point": -1.0467870396292849,
+      "paired_origin_block_CI95": [
+        -4.651219183648474,
+        4.0909924546772665
+      ],
+      "positive_favors_embedding_or_dynamic": true
+    }
+  },
+  "all_selected_mean_VAL_NMAE": {
+    "embedding_dynamic": 0.361745369608592,
+    "embedding_usual": 0.36029726327858314,
+    "schema_dynamic": 0.35859838074276223,
+    "schema_usual": 0.36092124356332145
+  },
+  "favorable_tasks_dynamic_vs_usual": 3,
+  "practical_targets_met": false,
+  "bootstrap_design": {
+    "load": {
+      "origins": 365,
+      "median_spacing_seconds": 86400.0,
+      "circular_block_origins": 7,
+      "block_days": 7,
+      "replicates": 5000,
+      "same_origin_assets_resampled_together": true
+    },
+    "wind": {
+      "origins": 23,
+      "median_spacing_seconds": 86400.0,
+      "circular_block_origins": 7,
+      "block_days": 7,
+      "replicates": 5000,
+      "same_origin_assets_resampled_together": true
+    },
+    "pv": {
+      "origins": 52,
+      "median_spacing_seconds": 86400.0,
+      "circular_block_origins": 7,
+      "block_days": 7,
+      "replicates": 5000,
+      "same_origin_assets_resampled_together": true
+    },
+    "net_load": {
+      "origins": 364,
+      "median_spacing_seconds": 86400.0,
+      "circular_block_origins": 7,
+      "block_days": 7,
+      "replicates": 5000,
+      "same_origin_assets_resampled_together": true
+    }
+  },
+  "seed": 2027,
+  "all16_reported": true,
+  "interpretation": "Exploratory intervals after reused VAL selection, not independent confirmation; token frequency omits ordering. Strong numeric/concat references retained, no universal language reasoning claim.",
+  "source_results_sha256": "07bfd8048cc4094f4dfa2c4ceb95c819bf0166faff15ae4458922a20c9512379"
+}

@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "typed_forward_windows": 37224,
+  "source_replay_windows": 16,
+  "modified_replay_windows": 32,
+  "source16_bitwise_exact": true,
+  "postload_GPU_seconds": 1362.9215075969696,
+  "optimizer_updates": 0,
+  "qualification_updates": 0,
+  "formal_updates": 0,
+  "new_forecasting_weights": 0
+}

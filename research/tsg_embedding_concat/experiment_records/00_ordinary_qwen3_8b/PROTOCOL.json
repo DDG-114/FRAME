@@ -1,0 +1,151 @@
+{
+  "study": "proposed_paper_ablation_s2027_20261030",
+  "seed": 2027,
+  "arms": {
+    "dual": {
+      "panel": "A/B/C/D",
+      "hypothesis": "Full EnergyCA-LLM, reused across every panel",
+      "formal_updates": 2560,
+      "qualification_updates": 3,
+      "allocated_parameters": 1937797
+    },
+    "mlp_schema": {
+      "panel": "A",
+      "hypothesis": "Two-layer trainable MLP on normalized token-frequency facts; same Qwen tokenizer and512-token truncation,4096 fixed tokenID-hash bins; no language-model weights",
+      "formal_updates": 2560,
+      "qualification_updates": 3,
+      "allocated_parameters": 1954181
+    },
+    "frozen_random": {
+      "panel": "A",
+      "hypothesis": "Fresh seed2027 ordinary Qwen3-8B architecture, frozen; same public tokenizer and mean pooling, no public pretrained weights",
+      "formal_updates": 2560,
+      "qualification_updates": 3,
+      "allocated_parameters": 1937797
+    },
+    "numeric_state": {
+      "panel": "B",
+      "hypothesis": "Zero semantic state in both controller branches; retain numerical history and availability",
+      "formal_updates": 2560,
+      "qualification_updates": 3,
+      "allocated_parameters": 1937797
+    },
+    "semantic_state": {
+      "panel": "B",
+      "hypothesis": "Zero pooled history in both controller branches; retain numerical predictor inputs and availability",
+      "formal_updates": 2560,
+      "qualification_updates": 3,
+      "allocated_parameters": 1937797
+    },
+    "concat_only": {
+      "panel": "B",
+      "hypothesis": "Zero only the projected semantic-numerical product branch",
+      "formal_updates": 2560,
+      "qualification_updates": 3,
+      "allocated_parameters": 1937797
+    },
+    "none": {
+      "panel": "C",
+      "hypothesis": "Zero adapter output and its candidate-energy penalty",
+      "formal_updates": 2560,
+      "qualification_updates": 3,
+      "allocated_parameters": 1937797
+    },
+    "fixed": {
+      "panel": "C",
+      "hypothesis": "Both gate factors fixed to one; learn shared low-rank bases",
+      "formal_updates": 2560,
+      "qualification_updates": 3,
+      "allocated_parameters": 1937797
+    },
+    "task_specific": {
+      "panel": "C",
+      "hypothesis": "Four separate rank8 basis pairs per layer, cloned from common initialization; gates remain dynamic",
+      "formal_updates": 2560,
+      "qualification_updates": 3,
+      "allocated_parameters": 1962373
+    },
+    "rank_only": {
+      "panel": "C",
+      "hypothesis": "Learn vector gate; strength fixed to one",
+      "formal_updates": 2560,
+      "qualification_updates": 3,
+      "allocated_parameters": 1937797
+    },
+    "strength_only": {
+      "panel": "C",
+      "hypothesis": "Vector gate fixed to one; learn scalar strength",
+      "formal_updates": 2560,
+      "qualification_updates": 3,
+      "allocated_parameters": 1937797
+    },
+    "no_availability": {
+      "panel": "D",
+      "hypothesis": "Remove explicit available_groups text and zero ten availability inputs in controller/future projection; retain masks and observation-age descriptions",
+      "formal_updates": 2560,
+      "qualification_updates": 3,
+      "allocated_parameters": 1937797
+    }
+  },
+  "training": {
+    "batch": {
+      "load": 16,
+      "wind": 2,
+      "pv": 16,
+      "net_load": 16
+    },
+    "microbatch": 4,
+    "optimizer": "AdamW",
+    "lr": 0.0003,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "weight_decay": 0.0001,
+    "clip": 1.0,
+    "schedule": "constant",
+    "BF16": true,
+    "EMA": false,
+    "language_LoRA": false,
+    "loss": "equal-task TRAIN-mean-absolute-scale masked Huber1 plus1e-4 pre-strength branch energy"
+  },
+  "selection": {
+    "metric": "complete four-task VAL asset-macro NMAE mean",
+    "earliest_tie": true,
+    "every_updates": 128,
+    "eligible": "128..2560",
+    "shared_checkpoint": true,
+    "TEST": false
+  },
+  "budget": {
+    "formal_total": 30720,
+    "qualification_total": 36,
+    "previous_pair_unspent_budget_included": {
+      "formal": 5120,
+      "qualification": 6
+    },
+    "newly_added_beyond_prior_pair": {
+      "formal": 25600,
+      "qualification": 30
+    },
+    "prior_attempt_formal": 0,
+    "prior_attempt_qualification": 0,
+    "earlier_encoder_cache_and_CPU_costs_retained": true,
+    "encoder_cache_builds_have_zero_forecast_optimizer_updates": true
+  },
+  "condition_evaluation": {
+    "fitted_models": [
+      "dual",
+      "no_availability"
+    ],
+    "conditions": [
+      "complete",
+      "remove",
+      "delay24h"
+    ],
+    "selection": "only complete-context source VAL; frozen selected weights for all conditions",
+    "removal": "mask historical non-target non-calendar channels only",
+    "delay": "mask latest24 physical hours of these channels; retain old weather descriptors and age",
+    "unchanged_texts": "reuse cached vectors exactly by full text SHA; no stochastic recomputation of unchanged descriptions"
+  }
+}

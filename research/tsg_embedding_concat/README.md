@@ -15,6 +15,7 @@ Embedding 相对 MLP 改善 3.11%，四项任务的 NMAE 均降低。共同训�
 
 ## 分支内容
 
+- [实验记录](experiment_records/README.md)汇总两条路线的配置、候选步指标和独立核验结果。
 - [普通 Qwen3-8B 路线](ordinary_qwen3_8b/README.md)保存当前稿件源码、原完整融合配置和已核验 Table II 消融。
 - `predictor/` 保存预测器和训练入口。
 - `fact_encoding/` 保存事实构造、结构化表示和冻结 Embedding 编码的源码快照。

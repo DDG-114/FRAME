@@ -1,0 +1,193 @@
+{
+  "status": "complete_independently_verified",
+  "study": "tsg_semantic_field_diagnostic_s2027_20261103",
+  "optimizer_updates": 0,
+  "qualification_updates": 0,
+  "formal_updates": 0,
+  "collection_files_SHA_rechecked": 95,
+  "raw_files": 64,
+  "correct16raw_bitwise_exact": true,
+  "source_encoder16_bitwise_exact": true,
+  "actual_inputbytes_exact": true,
+  "no_op_exact": true,
+  "effects": {
+    "embedding_dynamic": {
+      "complete": {
+        "train": {
+          "mean_gain_percent": 0.0,
+          "task_gains": {
+            "load": 0.0,
+            "wind": 0.0,
+            "pv": 0.0,
+            "net_load": 0.0
+          }
+        },
+        "val": {
+          "mean_gain_percent": 0.0,
+          "task_gains": {
+            "load": 0.0,
+            "wind": 0.0,
+            "pv": 0.0,
+            "net_load": 0.0
+          }
+        }
+      },
+      "level": {
+        "train": {
+          "mean_gain_percent": 0.5897034174293547,
+          "task_gains": {
+            "load": 5.149636289364623,
+            "wind": 0.009469420468566359,
+            "pv": 0.35547552220986933,
+            "net_load": 0.7477162903226975
+          }
+        },
+        "val": {
+          "mean_gain_percent": 0.34244931615970975,
+          "task_gains": {
+            "load": 2.963889311943424,
+            "wind": 0.018458696497880567,
+            "pv": 0.14792997604726743,
+            "net_load": 0.5609525567641938
+          }
+        }
+      },
+      "trend": {
+        "train": {
+          "mean_gain_percent": 0.7646984743951091,
+          "task_gains": {
+            "load": 8.109270959335213,
+            "wind": 0.0030522796130139085,
+            "pv": 0.04496150736270632,
+            "net_load": 1.1148578100230178
+          }
+        },
+        "val": {
+          "mean_gain_percent": 0.6219549548837633,
+          "task_gains": {
+            "load": 6.335410963075749,
+            "wind": -0.009290094644653912,
+            "pv": 0.06056302966002125,
+            "net_load": 0.9641887488133771
+          }
+        }
+      },
+      "weather": {
+        "train": {
+          "mean_gain_percent": -0.19582709372432117,
+          "task_gains": {
+            "load": -2.6051367508791445,
+            "wind": 0.006006006978165335,
+            "pv": 0.0,
+            "net_load": 0.0
+          }
+        },
+        "val": {
+          "mean_gain_percent": -0.18452855770958454,
+          "task_gains": {
+            "load": -2.3212644930930226,
+            "wind": 0.00305949299316266,
+            "pv": 0.0,
+            "net_load": 0.0
+          }
+        }
+      }
+    },
+    "schema_dynamic": {
+      "complete": {
+        "train": {
+          "mean_gain_percent": 0.0,
+          "task_gains": {
+            "load": 0.0,
+            "wind": 0.0,
+            "pv": 0.0,
+            "net_load": 0.0
+          }
+        },
+        "val": {
+          "mean_gain_percent": 0.0,
+          "task_gains": {
+            "load": 0.0,
+            "wind": 0.0,
+            "pv": 0.0,
+            "net_load": 0.0
+          }
+        }
+      },
+      "level": {
+        "train": {
+          "mean_gain_percent": -0.056558896961944605,
+          "task_gains": {
+            "load": -0.9930910571565699,
+            "wind": 0.0023032247272625206,
+            "pv": -8.196378005198568e-05,
+            "net_load": 0.31766742312989704
+          }
+        },
+        "val": {
+          "mean_gain_percent": 0.06401051843234473,
+          "task_gains": {
+            "load": 0.6141694812016985,
+            "wind": 0.007525098233929217,
+            "pv": -0.005005741875319103,
+            "net_load": 0.25398707644253005
+          }
+        }
+      },
+      "trend": {
+        "train": {
+          "mean_gain_percent": 0.1655774559818579,
+          "task_gains": {
+            "load": 1.7842502234475033,
+            "wind": 0.0023057166621209824,
+            "pv": -0.006230897390513412,
+            "net_load": 0.4492209637353084
+          }
+        },
+        "val": {
+          "mean_gain_percent": 0.1012324944544285,
+          "task_gains": {
+            "load": 1.0287855557584047,
+            "wind": 0.002579123125456828,
+            "pv": 0.0022571450432939955,
+            "net_load": 0.34337542876528016
+          }
+        }
+      },
+      "weather": {
+        "train": {
+          "mean_gain_percent": -0.037094963853001595,
+          "task_gains": {
+            "load": -0.49324321311869923,
+            "wind": 0.0017972416900713384,
+            "pv": 0.0,
+            "net_load": 0.0
+          }
+        },
+        "val": {
+          "mean_gain_percent": 0.07771736914518046,
+          "task_gains": {
+            "load": 1.0008703195519497,
+            "wind": 0.0023314476082947344,
+            "pv": 0.0,
+            "net_load": 0.0
+          }
+        }
+      }
+    }
+  },
+  "encoding": {
+    "modified_forward_windows": 55836,
+    "replay_windows": 64,
+    "postload_seconds": 1011.2946557998657
+  },
+  "forecaster_forward_windows": 148896,
+  "conclusions": [
+    "Embedding trends influenceLoadandNet, butlargerdependencydoesnotimplybettertrainedforecasting.",
+    "Currentcoarseweather isnotconsistentlyhelpful: wrongweather improvesLoadTRAINandVAL inthisfrozenmodel; permutationcanbeoff-support andisnotaretrainedablation.",
+    "Windhasmanychangedlevel/weatherwindowsbutverylittleforecastresponse.",
+    "PVandNetweather has0changedwindows becausecurrentcoarseobservedweatherisnotprovided; thisdoesnotexcludealreadyavailableseparateNetNWPforecastvalues.",
+    "Originalterciletrendhighdoesnotmeansignedrise. Testtypedexplicitstate/changes andseparateweatherfacts, withsame-factsstructurednonLLMcontrol."
+  ],
+  "source_result_SHA": "38700a6a2ffd4acca74e167961bfb61472ee299b41b2610eb3a010c6002514c0"
+}

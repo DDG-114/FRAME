@@ -1,0 +1,94 @@
+{
+  "status": "complete_exploratory_comparison",
+  "source_study": "tsg_typed_concat_pair_s2027_20261103",
+  "effects": {
+    "concat_dynamic_vs_usual_percent_gain": {
+      "point": 2.0765762554743383,
+      "paired_origin_block_CI95": [
+        -0.16973775040803435,
+        5.195880566638901
+      ],
+      "positive_favors_concat_or_dynamic": true
+    },
+    "dual_dynamic_vs_usual_percent_gain": {
+      "point": 0.8922122384092845,
+      "paired_origin_block_CI95": [
+        -1.6346384177564566,
+        3.4175220972911995
+      ],
+      "positive_favors_concat_or_dynamic": true
+    },
+    "concat_vs_dual_dynamic_percent_gain": {
+      "point": 1.177461797890722,
+      "paired_origin_block_CI95": [
+        -0.3906458100411536,
+        2.6236478170574946
+      ],
+      "positive_favors_concat_or_dynamic": true
+    },
+    "concat_vs_dual_usual_percent_gain": {
+      "point": -0.01777682680206283,
+      "paired_origin_block_CI95": [
+        -2.872732555154096,
+        2.1884349583402565
+      ],
+      "positive_favors_concat_or_dynamic": true
+    },
+    "dynamic_advantage_interaction_log_percent": {
+      "point": 1.2022240264122668,
+      "paired_origin_block_CI95": [
+        -1.4386973070527023,
+        4.381501774634572
+      ],
+      "positive_favors_concat_or_dynamic": true
+    }
+  },
+  "all_selected_mean_VAL_NMAE": {
+    "typed_embedding_dynamic": 0.3470036238013211,
+    "typed_embedding_usual": 0.35436222563727515,
+    "dual_dynamic": 0.3511381412726299,
+    "dual_usual": 0.35429924247457945
+  },
+  "favorable_tasks_dynamic_vs_usual": 2,
+  "favorable_tasks_concat_vs_dual": 4,
+  "practical_targets_met": false,
+  "strong_reference_met": false,
+  "bootstrap_design": {
+    "load": {
+      "origins": 365,
+      "median_spacing_seconds": 86400.0,
+      "circular_block_origins": 7,
+      "block_days": 7,
+      "replicates": 5000,
+      "same_origin_assets_resampled_together": true
+    },
+    "wind": {
+      "origins": 23,
+      "median_spacing_seconds": 86400.0,
+      "circular_block_origins": 7,
+      "block_days": 7,
+      "replicates": 5000,
+      "same_origin_assets_resampled_together": true
+    },
+    "pv": {
+      "origins": 52,
+      "median_spacing_seconds": 86400.0,
+      "circular_block_origins": 7,
+      "block_days": 7,
+      "replicates": 5000,
+      "same_origin_assets_resampled_together": true
+    },
+    "net_load": {
+      "origins": 364,
+      "median_spacing_seconds": 86400.0,
+      "circular_block_origins": 7,
+      "block_days": 7,
+      "replicates": 5000,
+      "same_origin_assets_resampled_together": true
+    }
+  },
+  "seed": 2027,
+  "all16_reported": true,
+  "interpretation": "Exploratory intervals after reused VAL selection, not independent confirmation; Same two typed caches in both fusion modes; reuse two already audited dual cells. Strong historical numeric and coarse concat references retained. No language-specific claim.",
+  "source_results_sha256": "a18de9ed5c994f5c0d5bf5d7a65e33630dac2098cdd63248b5869f4c3a2d78f7"
+}

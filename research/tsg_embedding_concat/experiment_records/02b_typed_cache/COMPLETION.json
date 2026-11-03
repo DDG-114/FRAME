@@ -1,0 +1,15 @@
+{
+  "status": "complete_independently_verified",
+  "study": "tsg_typed_operating_facts_cache_s2027_20261103",
+  "registration_sha256": "eb78336343be8983bc9e3a5fccd27f100c9e787b5272177bf4daf9f4e853c4cd",
+  "collection_files_SHA_rechecked": 49,
+  "forward_windows": 37224,
+  "source_replay": 16,
+  "modified_replay": 32,
+  "postload_seconds": 1362.9215075969696,
+  "no_optimizer_or_forecasting_weights": true,
+  "all_4cache_SHA_and_native_input_audit_passed": true,
+  "source16_bitwise_exact": true,
+  "new_content_is_not_forecasting_gain": true,
+  "decision": "Proceed to registeredsame-TSG typedEncoder x dynamic/usual factorial with strong field-bound control; keep all source assets sealed."
+}
