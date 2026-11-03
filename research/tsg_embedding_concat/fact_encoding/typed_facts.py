@@ -1,4 +1,4 @@
-"""Forecast-origin facts from existing masked inputs, with no target-label use."""
+"""Forecast-origin facts from available history and forecasts."""
 from collections import defaultdict
 from fractions import Fraction
 import math

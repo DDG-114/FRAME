@@ -60,7 +60,7 @@ def prepare(data, corpus):
             key = next(k for k in keys if len(origins[k]) >= 16 or k[-1] == 'asset')
             value = []
             for j, current in enumerate(facts[task][i]):
-                # A missing observation remains missing, even if the TRAIN bin is populated.
+                # The usual facts use the receiving window's missingness pattern.
                 counts = buckets[key][j]
                 available = [v for v in BANDS[:-1] if counts[v]]
                 value.append('unavailable' if current == 'unavailable' or not available else min(available, key=lambda v: (-counts[v], BANDS.index(v))))

@@ -1,4 +1,4 @@
-"""Two prespecified typed-fact caches, frozen encoder, no forecasting updates."""
+"""Frozen encoder for dynamic and usual typed-fact caches."""
 from pathlib import Path
 import hashlib
 import os

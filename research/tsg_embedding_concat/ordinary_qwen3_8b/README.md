@@ -12,4 +12,4 @@
 | 数值状态控制（numeric_state） | 0.348082 |
 | 普通 Qwen3-8B 拼接控制（concat_only） | 0.342964 |
 
-这些结果归属原普通 8B 消融协议。与本分支 Embedding 路线比较时，需要匹配运行事实、读出和融合设置，才能归因于编码器。所有归档快照的来源和 SHA-256 见 [PROVENANCE.json](PROVENANCE.json)。
+Table II 对应普通 Qwen3-8B 的原事实文本与全文均值读出。Embedding 路线采用显式运行事实与末 token 读出。文件来源和归档 SHA-256 见 [PROVENANCE.json](PROVENANCE.json)。含 `source_sha256` 的条目同时记录实验原件的校验值。

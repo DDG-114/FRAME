@@ -1,4 +1,4 @@
-"""Prepared full-budget four-task trainer; no old trained weights are loaded."""
+"""Four-task training from seeded initialization."""
 from pathlib import Path
 from contextlib import contextmanager
 import argparse

@@ -32,7 +32,7 @@ def input_text(text):
 
 
 def token_rows(tokenizer, texts):
-    # Both models consume this exact sequence, including one embedding EOS.
+    # The shared token sequence ends with one EOS.
     rows = tokenizer(texts, add_special_tokens=False, truncation=False, padding=False)['input_ids']
     terminal = tokenizer.convert_tokens_to_ids('<|endoftext|>')
     assert isinstance(terminal, int) and terminal != tokenizer.unk_token_id

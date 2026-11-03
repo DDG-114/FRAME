@@ -47,7 +47,7 @@ def vector(record,stats):
             x=record['values'][FACTS.index(key)];v += [float(x is not None and x<0),float(x==0),float(x is not None and x>0)]
     norm=math.sqrt(math.fsum(x*x for x in v));out=np.zeros(4096,np.float32);out[:len(v)]=np.asarray(v,np.float64)/norm
     assert np.isfinite(out).all() and abs(float(np.linalg.norm(out))-1)<1e-6
-    # Quantized text values must be recoverable exactly after the float32 interface.
+    # Round-trip check for quantized values in the float32 representation.
     for j,(x,f) in enumerate(zip(record['values'],s['facts'])):
         if x is not None:assert int(np.rint(float(out[first+j])/float(out[0])*f['scale']+f['mean']))==x,(task,FACTS[j],x)
     for j,k in enumerate(META):

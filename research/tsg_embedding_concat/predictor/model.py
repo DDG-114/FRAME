@@ -74,7 +74,7 @@ class Adapter(nn.Module):
         if mode == 'none':
             candidate = torch.zeros_like(candidate)
         applied = alpha[:, None] * candidate
-        # The manuscript regularizes the candidate BEFORE the strength gate.
+        # The energy penalty uses the candidate before strength scaling.
         penalty = candidate.float().square().mean((1, 2))
         return hidden + applied, penalty, gamma, alpha, candidate, applied
 
@@ -105,7 +105,7 @@ class PaperForecaster(nn.Module):
         self.decoder = nn.MultiheadAttention(d, c.heads, dropout=c.dropout, batch_first=True)
         self.output = nn.Linear(d, 1)
         if c.mode in ('mlp_schema', 'mlp_schema_concat'):
-            # Preserve all common numerical initialization and the subsequent RNG stream.
+            # The schema projection uses a separate RNG context.
             with torch.random.fork_rng(devices=[]):
                 self.schema_output = nn.Linear(d, d, bias=False)
 

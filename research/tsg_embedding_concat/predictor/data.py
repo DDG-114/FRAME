@@ -116,7 +116,7 @@ class Dataset:
         hm = a['history_mask'][row]
         daily = int(round(1440/int(a['cadence_minutes'][row])))
         w = self.weather[task]
-        # Geography/capacity values are not supplied by this native numerical contract.
+        # Geographic and capacity slots use the default fill values.
         return np.asarray([1, 1, 0, a['known_future_mask'][row, :, :4].any(), 0,
             hm[-daily:, w].any() if w else False, hm[-daily:, 0].any(),
             hm[:-daily, w].any() if w else False, hm[:-daily, 0].any(), 1], np.float32)
