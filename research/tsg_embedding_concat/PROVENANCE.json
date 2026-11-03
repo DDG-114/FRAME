@@ -1,0 +1,69 @@
+{
+  "files": {
+    "predictor/model.py": {
+      "source": "tsg_embedding_vs_mlp_concat_s2027_20261103/model.py",
+      "sha256": "0933337a8a3eb31e4af37d52b5c28f90108714969bbad86bcc91540044823db1"
+    },
+    "predictor/data.py": {
+      "source": "tsg_embedding_vs_mlp_concat_s2027_20261103/data.py",
+      "sha256": "f05a8da92b57202907b4aae25192bad56034bf89d729c09e3fd51325f6f423b6"
+    },
+    "predictor/train.py": {
+      "source": "tsg_embedding_vs_mlp_concat_s2027_20261103/train.py",
+      "sha256": "96627f0dc0b8aa5636245a70b50089e2c174a24fa633afd94b08cfd50b075a54"
+    },
+    "predictor/checks.py": {
+      "source": "tsg_embedding_vs_mlp_concat_s2027_20261103/checks.py",
+      "sha256": "6e8047c4edc708ed37de4c69d261b5958bb8754bd21b0ba219152fcc17ca9254"
+    },
+    "predictor/test_paper_model.py": {
+      "source": "tsg_embedding_vs_mlp_concat_s2027_20261103/test_paper_model.py",
+      "sha256": "688696d3353f92e07d1df49f4aaaad1dbf3933dc2692fc627813ee4e9f2d30d8"
+    },
+    "fact_encoding/typed_facts.py": {
+      "source": "tsg_typed_operating_facts_cache_s2027_20261103/typed_facts.py",
+      "sha256": "8f8407ae72625305e4f08f94c29a8beef24c7331e15c675fa5e4cffed241e82b"
+    },
+    "fact_encoding/structured.py": {
+      "source": "tsg_typed_operating_facts_cache_s2027_20261103/structured.py",
+      "sha256": "7337ea5f20836ece35b69a133fe0c164acc876088bfc75167d56930d498588fc"
+    },
+    "fact_encoding/encode_typed.py": {
+      "source": "tsg_typed_operating_facts_cache_s2027_20261103/encode_typed.py",
+      "sha256": "ecbbe9023dd6902a99b3315729412c7a8ad95f53e0c57ab7044cde87c5741a96"
+    },
+    "fact_encoding/context.py": {
+      "source": "tsg_typed_operating_facts_cache_s2027_20261103/context.py",
+      "sha256": "706b98c94ce3ff19a9d3467ddcb8748c3c155fe164465740655b2d4ae80886f2"
+    },
+    "fact_encoding/data.py": {
+      "source": "tsg_typed_operating_facts_cache_s2027_20261103/data.py",
+      "sha256": "f05a8da92b57202907b4aae25192bad56034bf89d729c09e3fd51325f6f423b6"
+    },
+    "fact_encoding/cache_tools.py": {
+      "source": "tsg_typed_operating_facts_cache_s2027_20261103/cache_tools.py",
+      "sha256": "0e7e31d406cfcbaf00685453f4073d09220d4fb0ff3607a89a907e8d6903430a"
+    },
+    "notes/EMBEDDING_VS_MLP_COMPARISON_PLAN_20261103.md": {
+      "source": "tsg_embedding_recursive_20261102/EMBEDDING_VS_MLP_COMPARISON_PLAN_20261103.md",
+      "sha256": "68315b5d226f06b5fa3fd9efbc4b390c4179686fed90212e846f48355b190f8f"
+    },
+    "notes/ROUND4_RESEARCH_REVIEW_20261103.md": {
+      "source": "tsg_embedding_recursive_20261102/ROUND4_RESEARCH_REVIEW_20261103.md",
+      "sha256": "9ae54bf005df84b1472ade8ca77ef5fef745696608d4fe1cff07a163566522bc"
+    },
+    "evidence/DECISION.json": {
+      "source": "tsg_embedding_vs_mlp_concat_s2027_20261103/analysis/DECISION.json",
+      "sha256": "8b9d157a52831049273876294f14680cc483c384be44ad775f6c7886dd049cd4"
+    },
+    "evidence/SELECTED_VAL.csv": {
+      "source": "tsg_embedding_vs_mlp_concat_s2027_20261103/analysis/SELECTED_VAL.csv",
+      "sha256": "fe1d0112aa91dff03051969cf55f261d705fd231d791a11098bfacc48d2b3882"
+    },
+    "evidence/SAME_STEP_ALL20.json": {
+      "source": "tsg_embedding_vs_mlp_concat_s2027_20261103/analysis/SAME_STEP_ALL20.json",
+      "sha256": "7cce3349ad5608f14a3229429c96efda17303f27835ba8df85288fe01ee9679d"
+    }
+  },
+  "matched_study_registration_sha256": "49ca70565850333c96d6733430a081ad11fec4060ad619cc5a03ae0d1418fb04"
+}

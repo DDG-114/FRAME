@@ -1,0 +1,5 @@
+# Preserve the source and evidence bytes recorded in PROVENANCE.json.
+predictor/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+fact_encoding/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+evidence/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+notes/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
